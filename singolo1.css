@@ -62,7 +62,7 @@ header a h1 {
     display: inline;
     font-size: 24px;
     line-height: 6px;
-    font-weight: 700;
+    font-weight: 400;
     text-align: left;
 }
 
@@ -125,30 +125,31 @@ header .header__bottom-line {
 }
 
 section.slider {
-    height: 600px;
-    padding: 52px 40px 0 42px;
+    height: 600px; 
     background-color: #f06c64;
 }
 
 .slider .slider__block {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 58px;
+    padding: 52px 40px 58px 42px;
     height: inherit;
 }
 
 .slider .slider__block:before {
-    content: url(assets/icons/arrow-left.png);
+    content: url(assets/icons/left.svg);
     width: 16px;
     height: 27px;
     margin-top: 228px;
+    cursor: pointer;
 }
 
 .slider .slider__block:after {
-    content: url(assets/icons/arrow-right.png);
+    content: url(assets/icons/right.svg);
     width: 16px;
     height: 27px;
     margin-top: 228px;
+    cursor: pointer;
 }
 
 .slider .slider__block .phone-one {
@@ -157,12 +158,14 @@ section.slider {
 }
 
 .slider .slider__block .phone_two {
-    display: flex;
     align-self: center;
-    width: 484px;
+    width: 486px;
     height: 240px;
+    transform: translateY(-2px);
 }
-
+.slider .slider__block .phone-one + .phone_two{
+    margin-left: 20px;
+}
 .slider .slider__bottom-line {
     width: 100%;
     height: 6px;
