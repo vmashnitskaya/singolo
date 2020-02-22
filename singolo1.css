@@ -36,11 +36,6 @@
     font-family: Lato, Verdana, sans-serif;
 }
 
-body {
-    max-width: 1020px;
-    margin: 0 auto;
-}
-
 .container {
     max-width: 1020px;
     margin: 0 auto;
@@ -132,11 +127,12 @@ section.slider {
 }
 
 .slider .slider__block:before {
-    content: url(assets/icons/left.svg);
+    content: url(assets/icons/left.svg);  
     width: 16px;
     height: 28px;
     margin-top: 228px;
     cursor: pointer;
+    
 }
 
 .slider .slider__block:after {
