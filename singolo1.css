@@ -50,7 +50,7 @@ header.header {
 header .header__block {
     display: flex;
     justify-content: space-between;
-    padding: 31px 40px 32px 40px;
+    padding: 34px 40px 32px 40px;
 }
 
 header a h1 {
@@ -71,7 +71,7 @@ header a {
 
 header nav {
     width: 372px;
-    padding-top: 14px;
+    padding-top: 12px;
 }
 
 header nav ul {
@@ -166,7 +166,7 @@ section.services {
 }
 
 .services .services__block {
-    padding: 60px 40px 66px 40px;
+    padding: 62px 40px 66px 40px;
 }
 
 .services .services__block .header {
@@ -176,7 +176,7 @@ section.services {
 }
 
 .services .services__block .description {
-    margin-top: 20px;
+    margin-top: 19px;
     font-size: 18px;
     font-weight: 300;
     line-height: 30px;
@@ -202,7 +202,7 @@ section.services {
 }
 
 .services .services__items .services__item:nth-child(4), .services .services__items .services__item:nth-child(5), .services .services__items .services__item:nth-child(6) {
-    margin-top: 31px;
+    margin-top: 30px;
 }
 
 .services .services__items .services__item.image {
@@ -223,11 +223,12 @@ section.services {
 .services .services__items .services__item-column {
     display: flex;
     flex-direction: column;
-    margin-left: 21px;
+    margin-left: 22px;
     width: 220px;
 }
 
 .services .services__items .services__item-column .header {
+    margin-top: 1px;
     font-size: 18px;
     line-height: 18px;
     letter-spacing: -0.01px;
