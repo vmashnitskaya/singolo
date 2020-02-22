@@ -202,7 +202,7 @@ section.services {
 }
 
 .services .services__items .services__item:nth-child(4), .services .services__items .services__item:nth-child(5), .services .services__items .services__item:nth-child(6) {
-    margin-top: 31px;
+    margin-top: 28px;
 }
 
 .services .services__items .services__item.image {
