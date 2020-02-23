@@ -36,6 +36,7 @@
     font-family: Lato, Verdana, sans-serif;
 }
 
+body,
 .container {
     max-width: 1020px;
     margin: 0 auto;
