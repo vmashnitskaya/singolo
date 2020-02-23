@@ -126,21 +126,22 @@ section.slider {
     height: inherit;
 }
 
-.slider .slider__block:before {
-    content: url(assets/icons/left.svg);  
+.slider .slider__block button {
+    margin-top: 228px;
     width: 16px;
     height: 28px;
-    margin-top: 228px;
+    border: 0;
+    outline: none;
+    background-color: transparent;
     cursor: pointer;
-    
 }
 
-.slider .slider__block:after {
-    content: url(assets/icons/right.svg);
-    width: 16px;
-    height: 28px;
-    margin-top: 228px;
-    cursor: pointer;
+.slider .slider__block button.left-button {
+    background-image: url(assets/icons/left.svg);
+}
+
+.slider .slider__block button.right-button {
+    background-image: url(assets/icons/right.svg);
 }
 
 .slider .slider__block .phone-one {
