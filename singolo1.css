@@ -203,8 +203,10 @@ section.services {
     width: 300px;
 }
 
-.services .services__items .services__item:nth-child(4), .services .services__items .services__item:nth-child(5), .services .services__items .services__item:nth-child(6) {
-    margin-top: 30px;
+.services .services__items .services__item:nth-child(4),
+.services .services__items .services__item:nth-child(5),
+.services .services__items .services__item:nth-child(6) {
+    margin-top: 28px;
 }
 
 .services .services__items .services__item.image {
