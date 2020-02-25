@@ -28,7 +28,8 @@
     src: url('assets/fonts/Lato-Black.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Lato-Black.woff') format('woff'), url('assets/fonts/Lato-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
-} 
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -36,6 +37,7 @@
     font-family: Lato, Verdana, sans-serif;
 }
 
+body,
 .container {
     max-width: 1020px;
     margin: 0 auto;
@@ -112,7 +114,6 @@ header nav ul li a:hover {
     color: #f06c64;
 }
 
-
 section.slider {
     height: 600px;
     background-color: #f06c64;
@@ -156,14 +157,14 @@ section.slider {
     height: 241px;
 }
 
-.slider .slider__block .phone-one + .phone_two {
+.slider .slider__block .phone-one+.phone_two {
     margin-left: 18px;
 }
 
 section.services {
     height: 504px;
     background-color: #f2f2f2;
-    border-bottom: 7px solid  #ffffff;
+    border-bottom: 7px solid #ffffff;
 }
 
 .services .services__block {
@@ -203,8 +204,8 @@ section.services {
 }
 
 .services .services__items .services__item:nth-child(4),
- .services .services__items .services__item:nth-child(5),
-  .services .services__items .services__item:nth-child(6) {
+.services .services__items .services__item:nth-child(5),
+.services .services__items .services__item:nth-child(6) {
     margin-top: 28px;
 }
 
