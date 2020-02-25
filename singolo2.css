@@ -108,18 +108,25 @@ section.portfolio {
     justify-content: flex-start;
     align-items: stretch;
     flex-wrap: wrap;
+    width: 962px;
+    height: 621px;
     margin-top: 19px;
+    overflow: hidden;
 }
 
 .portfolio .portfolio__images .portfolio__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 220px;
     height: 187px;
     margin-bottom: 20px;
-    margin-right: 20px
+    margin-right: 20px;
+    overflow: hidden;
 }
 
 .portfolio .portfolio__images .portfolio__image img {
-    filter: saturate(90%);
+    filter: contrast(90%);
 }
 
 section.about {
@@ -153,13 +160,15 @@ section.about {
     display: block;
     width: 300px;
     height: 300px;
-    filter: saturate(85%);
+    
 }
 
 .about .about__persons .about__person .header {
     margin-top: 18px;
     font-size: 18px;
     letter-spacing: 0.1px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .about .about__persons .about__person .description {
@@ -207,6 +216,7 @@ section.about {
 
 .about .about__persons .about__person .media .media-site .twitter {
     width: 14px;
+    margin-top: 1px;
     background: url('assets/icons/about_us/twitter.svg') no-repeat;
 }
 
