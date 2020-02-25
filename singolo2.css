@@ -171,14 +171,35 @@ section.about {
     display: flex;
 }
 
-.about .about__persons .about__person .media div {
+.about .about__persons .about__person .media .media_resourse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 32px;
     height: 32px;
     border: 1px solid #666d89;
     border-radius: 100%;
 }
 
+.about .about__persons .about__person .media .media_resourse div {
+    display: block;
+    height: 14px;
+    width: 14px;
+    filter: invert(45%) sepia(10%) saturate(968%) hue-rotate(191deg) brightness(92%) contrast(90%);
+}
 
-.about .about__persons .about__person .media .facebook {
+.about .about__persons .about__person .media .media_resourse .facebook {
+    background: url('assets/icons/about_us/facebook.svg') no-repeat;
+}
 
+.about .about__persons .about__person .media .media_resourse .google {
+    background: url('assets/icons/about_us/google.svg') no-repeat;
+}
+
+.about .about__persons .about__person .media .media_resourse .twitter {
+    background: url('assets/icons/about_us/twitter.svg') no-repeat;
+}
+
+.about .about__persons .about__person .media .media_resourse .linkedin {
+    background: url('assets/icons/about_us/linkedin.svg') no-repeat;
 }
