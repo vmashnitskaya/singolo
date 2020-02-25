@@ -126,8 +126,7 @@ section.about {
     height: 728px;
     padding: 66px 38px 66px 40px;
     background-color: #f2f2f2;
-    border-bottom: 6px solid red/*#ffffff*/
-    ;
+    border-bottom: 6px solid #ffffff;
 }
 
 .about.header {
@@ -141,12 +140,13 @@ section.about {
 
 .about .about__persons {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-top: 44px;
 }
 
 .about .about__persons .about__person {
     width: 300px;
+    margin-right: 20px;
 }
 
 .about .about__persons .about__person .photo {
@@ -159,47 +159,58 @@ section.about {
 .about .about__persons .about__person .header {
     margin-top: 18px;
     font-size: 18px;
+    letter-spacing: 0.1px;
 }
 
 .about .about__persons .about__person .description {
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 12px;
-    line-height: 22px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
 }
 
 .about .about__persons .about__person .media {
     display: flex;
+    margin-top: 25px;
 }
 
-.about .about__persons .about__person .media .media_resourse {
+.about .about__persons .about__person .media .media-site {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 32px;
     height: 32px;
+    margin-right: 8px;
     border: 1px solid #666d89;
     border-radius: 100%;
 }
 
-.about .about__persons .about__person .media .media_resourse div {
+.about .about__persons .about__person .media .media-site:hover {
+    cursor: pointer;
+}
+
+.about .about__persons .about__person .media .media-site div {
     display: block;
     height: 14px;
-    width: 14px;
     filter: invert(45%) sepia(10%) saturate(968%) hue-rotate(191deg) brightness(92%) contrast(90%);
 }
 
-.about .about__persons .about__person .media .media_resourse .facebook {
+.about .about__persons .about__person .media .media-site .facebook {
+    width: 8px;
     background: url('assets/icons/about_us/facebook.svg') no-repeat;
 }
 
-.about .about__persons .about__person .media .media_resourse .google {
+.about .about__persons .about__person .media .media-site .google {
+    width: 14px;
     background: url('assets/icons/about_us/google.svg') no-repeat;
 }
 
-.about .about__persons .about__person .media .media_resourse .twitter {
+.about .about__persons .about__person .media .media-site .twitter {
+    width: 14px;
     background: url('assets/icons/about_us/twitter.svg') no-repeat;
 }
 
-.about .about__persons .about__person .media .media_resourse .linkedin {
+.about .about__persons .about__person .media .media-site .linkedin {
+    width: 14px;
     background: url('assets/icons/about_us/linkedin.svg') no-repeat;
 }
