@@ -159,14 +159,21 @@ section.about {
 .about .about__persons .about__person .photo {
     display: block;
     width: 300px;
-    height: 300px;
-    
+    height: 300px; 
 }
-
+.about .about__persons .about__person .photo.first{
+    background: url('assets/images/about_us/first_person.png');
+}
+.about .about__persons .about__person .photo.second{
+    background: url('assets/images/about_us/second_person.png');
+}
+.about .about__persons .about__person .photo.third{
+    background: url('assets/images/about_us/third_person.png');
+}
 .about .about__persons .about__person .header {
-    margin-top: 18px;
+    margin-top: 20px;
     font-size: 18px;
-    letter-spacing: 0.1px;
+    letter-spacing: -0.1px;
     white-space: nowrap;
     overflow: hidden;
 }
