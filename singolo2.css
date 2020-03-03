@@ -98,7 +98,7 @@ section.portfolio {
     color: #dedede;
 }
 
-.portfolio .portfolio__button:focus {
+.portfolio .portfolio__button:active {
     border: 1px solid #c5c5c5;
     color: #dedede;
 }
