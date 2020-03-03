@@ -73,7 +73,7 @@ section.quote {
 
 .quote .quote__block {
     display: flex;
-    margin-top: 44px;
+    margin-top: 42px;
 }
 
 .quote .quote__block form {
@@ -81,11 +81,11 @@ section.quote {
     flex-direction: column;
 }
 
-.quote .quote__block form input, .quote .quote__block form textarea {
+.quote .quote__block form input,  .quote .quote__block form textarea{
     width: 620px;
     height: 38px;
     margin-bottom: 16px;
-    padding: 14px 15px;
+    padding: 10px 15px 10px 15px;
     border-radius: 5px;
     border: none;
     background-color: #d6564f;
@@ -94,8 +94,10 @@ section.quote {
     font-weight: 400;
 }
 
+
 .quote .quote__block form textarea {
     height: 202px;
+    padding-top: 12px;
     resize: none;
 }
 
@@ -119,7 +121,7 @@ section.quote {
     justify-self: self-start;
     width: 150px;
     height: 30px;
-    padding: 10px 0;
+    padding: 8px 0;
     cursor: pointer;
     background-color: #c04d47;
     text-align: center;
@@ -146,6 +148,7 @@ section.quote {
 }
 
 .quote .quote__block .quote__contacts {
+    margin-top: 2px;
     margin-left: 20px;
 }
 
@@ -155,14 +158,14 @@ section.quote {
 }
 
 .quote .quote__block .quote__contacts .description.contacts {
-    margin-top: 10px;
+    margin-top: 8px;
     font-size: 12px;
     line-height: 22px;
     letter-spacing: 0px;
 }
 
 .quote .quote__block .quote__contacts ul {
-    margin-top: 26px;
+    margin-top: 24px;
     list-style-type: none;
 }
 
@@ -186,13 +189,13 @@ section.quote {
 
 .quote .quote__block .quote__contacts li.phone:before {
     content: url('assets/icons/quote/phone.svg');
+    margin-right: 8px;
     margin-left: 1px;
-    margin-right: 12px;
 }
 
 .quote .quote__block .quote__contacts li.email:before {
     content: url('assets/icons/quote/email.svg');
-    margin-right: 11px;
+    margin-right: 8px;
 }
 
 .quote .quote__block .quote__contacts li a {
@@ -205,14 +208,15 @@ footer {
     justify-content: space-between;
     height: 77px;
     background-color: #2d303a;
-    padding: 23px 40px 22px 40px;
+    padding: 22px 40px 22px 40px;
 }
 
 footer .copyright {
-    width: 92px;
+    width: 96px;
     height: 11px;
-    margin-top: 11px;
-    background: url('assets/icons/footer/copyright.svg');
+    margin-top: 10px;
+    color: #666d89;
+    font-size: 12px;
 }
 
 .media {
