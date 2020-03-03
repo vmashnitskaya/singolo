@@ -73,7 +73,7 @@ section.quote {
 
 .quote .quote__block {
     display: flex;
-    margin-top: 43px;
+    margin-top: 44px;
 }
 
 .quote .quote__block form {
@@ -99,10 +99,35 @@ section.quote {
     resize: none;
 }
 
+.quote .quote__block form input.required{
+ background-color: #c04d47;
+}
+.quote .quote__block form div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.quote .quote__block form .error{
+    display: block;
+    font-size: 16px;
+    font-weight: 700px;
+    color: #f0d8d9;
+}
+
 .quote .quote__block input[type="submit"] {
     align-self: flex-end;
+    justify-self: self-start;
     width: 150px;
+    height: 30px;
+    padding: 10px 0;
+    cursor: pointer;
+    background-color: #c04d47;
     text-align: center;
+    font-weight: 700;
+}
+
+.quote .quote__block input[type="submit"]:active {
+    background-color: #ab443f;
 }
 
 .quote .quote__block form input::placeholder, .quote .quote__block form textarea::placeholder {
@@ -119,10 +144,6 @@ section.quote {
     color: transparent;
     border: none;
 }
-
-.quote .quote__block form input:required:invalid {
-    border-color: #c00000;
-  }
 
 .quote .quote__block .quote__contacts {
     margin-left: 20px;
@@ -142,14 +163,15 @@ section.quote {
 
 .quote .quote__block .quote__contacts ul {
     margin-top: 26px;
-    font-size: 12px;
-    font-weight: 400;
     list-style-type: none;
-    color: #f0d8d9;
 }
 
 .quote .quote__block .quote__contacts li {
     margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #f0d8d9;
+    letter-spacing: -0.1px;
 }
 
 .quote .quote__block .quote__contacts li:before {
@@ -176,4 +198,68 @@ section.quote {
 .quote .quote__block .quote__contacts li a {
     text-decoration: none;
     color: #f0d8d9;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    height: 77px;
+    background-color: #2d303a;
+    padding: 23px 40px 22px 40px;
+}
+
+footer .copyright {
+    width: 92px;
+    height: 11px;
+    margin-top: 11px;
+    background: url('assets/icons/footer/copyright.svg');
+}
+
+.media {
+    display: flex;
+}
+
+.media .media-site {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    border: 1px solid #666d89;
+    border-radius: 100%;
+}
+.media .media-site:last-child {
+    margin-right: 0;
+}
+
+.media .media-site:hover {
+    cursor: pointer;
+}
+
+.media .media-site div {
+    display: block;
+    height: 14px;
+    filter: invert(45%) sepia(10%) saturate(968%) hue-rotate(191deg) brightness(92%) contrast(90%);
+}
+
+.media .media-site .facebook {
+    width: 8px;
+    background: url('assets/icons/social_links/facebook.svg') no-repeat;
+}
+
+.media .media-site .google {
+    width: 14px;
+    background: url('assets/icons/social_links/google.svg') no-repeat;
+}
+
+.media .media-site .twitter {
+    width: 14px;
+    margin-top: 1px;
+    background: url('assets/icons/social_links/twitter.svg') no-repeat;
+}
+
+.media .media-site .linkedin {
+    width: 14px;
+    background: url('assets/icons/social_links/linkedin.svg') no-repeat;
 }
