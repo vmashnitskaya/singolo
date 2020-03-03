@@ -5,7 +5,7 @@
 	<style>
 		tspan { white-space:pre }
 	</style>
-	<g id="About Us">
+	<g id="Footer">
 		<g id="Social Media">
 			<g id="LinkedIn">
 				<use id="linkedin" href="#img1" transform="matrix(0.156,0,0,0.158,0,0)"/>
