@@ -213,21 +213,21 @@ section.about {
 
 .about .about__persons .about__person .media .media-site .facebook {
     width: 8px;
-    background: url('assets/icons/about_us/facebook.svg') no-repeat;
+    background: url('assets/icons/social_links/facebook.svg') no-repeat;
 }
 
 .about .about__persons .about__person .media .media-site .google {
     width: 14px;
-    background: url('assets/icons/about_us/google.svg') no-repeat;
+    background: url('assets/icons/social_links/google.svg') no-repeat;
 }
 
 .about .about__persons .about__person .media .media-site .twitter {
     width: 14px;
     margin-top: 1px;
-    background: url('assets/icons/about_us/twitter.svg') no-repeat;
+    background: url('assets/icons/social_links/twitter.svg') no-repeat;
 }
 
 .about .about__persons .about__person .media .media-site .linkedin {
     width: 14px;
-    background: url('assets/icons/about_us/linkedin.svg') no-repeat;
+    background: url('assets/icons/social_links/linkedin.svg') no-repeat;
 }
