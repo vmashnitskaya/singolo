@@ -284,12 +284,7 @@ section.portfolio {
     cursor: pointer;
 }
 
-.portfolio .portfolio__tag:first-child {
-    border: 1px solid #c5c5c5;
-    color: #dedede;
-}
-
-.portfolio .portfolio__button:active {
+.portfolio .portfolio__tag:focus {
     border: 1px solid #c5c5c5;
     color: #dedede;
 }
