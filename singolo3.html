@@ -56,44 +56,44 @@
                 </div>
             </div>
         </footer>
-    </body>
-    <script language="javascript">
-        let name = document.getElementById('name');
-        let form = document.getElementById('form');
-        let email = document.getElementById('email');
-
-        function validationRequired(input) {
-            error.innerHTML = 'Please provide values to all fields highlighted above';
-            input.classList.add("required");
-            event.preventDefault();
-        }
-
-        form.addEventListener('submit', function (event) {
-            if (name.value == "" && email.value == "") {
-                validationRequired(name);
-                validationRequired(email);
-            }
-            if (name.value == "") {
-                validationRequired(name);
-            }
-            if (email.value == "") {
-                validationRequired(email);
-            }
-            if (!email.value.match(/^[0-9a-z-\.]+\@[0-9a-z-]{2,}\.[a-z]{2,}$/i) && email.value != '') {
-                error.innerHTML = 'Provided e-mail address is incorrect.';
+        <script language="javascript">
+            let name = document.getElementById('name');
+            let form = document.getElementById('form');
+            let email = document.getElementById('email');
+    
+            function validationRequired(input) {
+                error.innerHTML = 'Please provide values to all fields highlighted above';
+                input.classList.add("required");
                 event.preventDefault();
             }
-        }, false);
-
-        email.addEventListener('input', function (event) {
-            if (email.classList.contains('required')) {
-                email.classList.remove('required');
-            }
-        }, false);
-        name.addEventListener('input', function (event) {
-            if (name.classList.contains('required')) {
-                name.classList.remove('required');
-            }
-        }, false);
-    </script>
+    
+            form.addEventListener('submit', function (event) {
+                if (name.value == "" && email.value == "") {
+                    validationRequired(name);
+                    validationRequired(email);
+                }
+                if (name.value == "") {
+                    validationRequired(name);
+                }
+                if (email.value == "") {
+                    validationRequired(email);
+                }
+                if (!email.value.match(/^[0-9a-z-\.]+\@[0-9a-z-]{2,}\.[a-z]{2,}$/i) && email.value != '') {
+                    error.innerHTML = 'Provided e-mail address is incorrect.';
+                    event.preventDefault();
+                }
+            }, false);
+    
+            email.addEventListener('input', function (event) {
+                if (email.classList.contains('required')) {
+                    email.classList.remove('required');
+                }
+            }, false);
+            name.addEventListener('input', function (event) {
+                if (name.classList.contains('required')) {
+                    name.classList.remove('required');
+                }
+            }, false);
+        </script>
+    </body>
 </html>
