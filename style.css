@@ -42,7 +42,7 @@ body, .container {
     margin: 0 auto;
 }
 
-header.header {
+header {
     height: 95px;
     background-color: #2d303a;
     border-bottom: 6px solid #323746;
@@ -70,18 +70,18 @@ header a {
     text-decoration: none;
 }
 
-header nav {
+header .header__block nav {
     width: 372px;
-    padding-top: 4px;
+    padding-top: 12px;
 }
 
-header nav ul {
+header .header__block nav ul {
     display: flex;
     justify-content: space-between;
     padding-left: 1px;
 }
 
-header nav ul li {
+header .header__block nav ul li {
     display: inline-block;
     font-size: 12px;
     font-weight: 400;
@@ -89,7 +89,7 @@ header nav ul li {
     letter-spacing: -0.15px;
 }
 
-header nav ul li:after {
+header .header__block nav ul li:after {
     content: "";
     display: inline-block;
     margin: 5px 11px 3px 11px;
@@ -99,17 +99,17 @@ header nav ul li:after {
     background-color: #494e62;
 }
 
-header nav ul li:last-child:after {
+header .header__block nav ul li:last-child:after {
     display: none;
     margin-top: 1px;
 }
 
-header nav ul li a {
+header .header__block nav ul li a {
     color: #ffffff;
     text-decoration: none;
 }
 
-header nav ul li a:hover {
+header .header__block nav ul li a:hover {
     color: #f06c64;
 }
 
@@ -262,7 +262,7 @@ section.portfolio {
     margin-top: 20px;
 }
 
-.portfolio .portfolio__tags{
+.portfolio .portfolio__tags {
     margin-top: 10px;
 }
 
@@ -310,6 +310,7 @@ section.portfolio {
     margin-right: 20px;
     overflow: hidden;
 }
+
 .portfolio .portfolio__images .portfolio__image:nth-child(4n) {
     margin-right: 0;
 }
@@ -507,7 +508,13 @@ section.quote {
     background-color: #ab443f;
 }
 
-.quote .quote__block form input::placeholder, .quote .quote__block form textarea::placeholder {
+.quote .quote__block form input::placeholder, .quote .quote__block form textarea::placeholder{
+    color: #f48c8f;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.quote .quote__block form input::-ms-input-placeholder, .quote .quote__block form textarea::-ms-input-placeholder {
     color: #f48c8f;
     font-size: 12px;
     font-weight: 400;

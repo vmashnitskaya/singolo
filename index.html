@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <header class="header">
+        <header id="header">
             <div class="container">
                 <div class="header__block"> 
                     <a href="#">
@@ -18,19 +18,19 @@
                     <nav>
                         <ul class="header__navigation">
                             <li>
-                                <a href="#">HOME</a>
+                                <a href="#header">HOME</a>
                             </li>
                             <li>
-                                <a href="#">SERVICES</a>
+                                <a href="#services">SERVICES</a>
                             </li>
                             <li>
-                                <a href="#">PORTFOLIO</a>
+                                <a href="#portfolio">PORTFOLIO</a>
                             </li>
                             <li>
-                                <a href="#">ABOUT</a>
+                                <a href="#about_us">ABOUT</a>
                             </li>
                             <li>
-                                <a href="#">CONTACT</a>
+                                <a href="#quote">CONTACT</a>
                             </li>
                         </ul>
                     </nav>
@@ -48,7 +48,7 @@
                 </div>
             </div>
         </section>
-        <section class="services">
+        <section class="services" id="services">
             <div class="container">
                 <div class="services__block">
                     <h2 class="header">Our Services</h2>
@@ -102,7 +102,7 @@
                 </div>
             </div>
         </section>
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
             <div class="container">
                 <h2 class="portfolio header">Portfolio</h2>
                 <p class="portfolio description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
@@ -128,7 +128,7 @@
                 </div>
             </div>
         </section>
-        <section class="about">
+        <section class="about" id="about_us">
             <div class="container">
                 <h2 class="about header">About Us</h2>
                 <p class="about description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -193,12 +193,12 @@
                 </div>
             </div>
         </section>
-        <section class="quote">
+        <section class="quote" id="quote">
             <h2 class="quote header">Get a Quote</h2>
             <p class="quote description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
             </p>
             <div class="quote__block">
-                <form method="POST" id="form" novalidate>
+                <form method="POST" id="form" target="_blank" novalidate>
                     <input type="text" name="user_name" id="name" placeholder="Name (Required)" required>
                     <input type="email" name="user_email" id="email" placeholder="Email (Required)" required>
                     <input type="text" name="user_subject" id="subject" placeholder="Subject">
