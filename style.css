@@ -265,7 +265,7 @@ section.portfolio {
 }
 
 .portfolio .portfolio__tags {
-    margin-top: 10px;
+    margin-top: 9px;
 }
 
 .portfolio .portfolio__tag {
@@ -381,7 +381,7 @@ section.about {
 
 .media {
     display: flex;
-    margin-top: 22px;
+    margin-top: 23px;
     margin-left: 1px;
 }
 
@@ -432,7 +432,7 @@ section.about {
 }
 
 section.quote {
-    height: 654px;
+    height: 655px;
     padding: 64px 40px;
     background-color: #f06c64;
     border-bottom: 6px solid #ea676b;
