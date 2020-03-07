@@ -138,11 +138,11 @@ section.slider {
 }
 
 .slider .slider__block button.left-button {
-    background-image: url(assets/icons/left.svg);
+    background-image: url(assets/icons/slider/left.svg);
 }
 
 .slider .slider__block button.right-button {
-    background-image: url(assets/icons/right.svg);
+    background-image: url(assets/icons/slider/right.svg);
 }
 
 .slider .slider__block .phone-one {
@@ -245,3 +245,4 @@ section.services {
     font-weight: 400;
     letter-spacing: -0.1px;
 }
+
