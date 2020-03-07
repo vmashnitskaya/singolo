@@ -240,10 +240,10 @@ section.services {
 }
 
 .services .services__items .services__item-column .description {
-    height: 58px;
+    height: 60px;
     margin-top: 10px;
     font-size: 12px;
-    line-height: 22px;
+    line-height: 21px;
     font-weight: 400;
     letter-spacing: -0.1px;
     overflow: hidden;
