@@ -243,14 +243,14 @@ section.services {
     height: 59px;
     margin-top: 9px;
     font-size: 12px;
-    line-height: 22px;
+    line-height: 21px;
     font-weight: 400;
     letter-spacing: -0.1px;
     overflow: hidden;
 }
 
 section.portfolio {
-    height: 870px;
+    height: 869px;
     padding: 66px 40px 58px 40px;
     border-bottom: 6px solid #323746;
     background-color: #2d303a;
@@ -375,7 +375,7 @@ section.about {
 .about .about__persons .about__person .description {
     margin-top: 9px;
     font-size: 12px;
-    line-height: 22px;
+    line-height: 21px;
     letter-spacing: -0.1px;
 }
 
