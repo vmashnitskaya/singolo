@@ -253,7 +253,7 @@ section.slider {
     height: 335px;
     left: 126px;
     top: 64px;
-    border-radius: 2px;
+    border-radius: 1px;
 }
 
 .slider .slider__block .slides .phone2 {

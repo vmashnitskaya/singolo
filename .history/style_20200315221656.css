@@ -251,20 +251,19 @@ section.slider {
     background-color: #2d303a;
     width: 189px;
     height: 335px;
-    left: 126px;
+    left: 125px;
     top: 64px;
-    border-radius: 2px;
+    cursor: pointer;
 }
 
 .slider .slider__block .slides .phone2 {
     position: absolute;
     z-index: 3;
     background-color: #2d303a;
-    width: 333px;
-    height: 189px;
+    width: 336px;
+    height: 190px;
     right: 200px;
     top: 134px;
-    border-radius: 2px;
     cursor: pointer;
 }
 

@@ -253,7 +253,7 @@ section.slider {
     height: 335px;
     left: 126px;
     top: 64px;
-    border-radius: 2px;
+    cursor: pointer;
 }
 
 .slider .slider__block .slides .phone2 {
@@ -262,9 +262,8 @@ section.slider {
     background-color: #2d303a;
     width: 333px;
     height: 189px;
-    right: 200px;
+    right: 201px;
     top: 134px;
-    border-radius: 2px;
     cursor: pointer;
 }
 
