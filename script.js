@@ -163,7 +163,7 @@
  }
 
  function validateEmailValue(input) {
-     if (!email.value.match(emailRegEx) && email.value != '') {
+     if (!input.value.match(emailRegEx) && input.value != '') {
          error.innerHTML = 'Provided e-mail address is incorrect.'
          event.preventDefault();
      }
@@ -212,18 +212,18 @@
  let quote = document.querySelector('#quote');
  let subject = document.querySelector('#subject');
  let description = document.querySelector('#description');
- let overlay = createDomeNode('div', 'overlay_modal');
- let modalCloseBtn = createButton('OK', 'button_close');
+ let modalCloseBtn = createButton('OK', 'modal__close', 'modal__close');
+ let overlay = createDomeNode('div', 'overlay_modal')
 
  function createModalContent() {
      let modal = createDomeNode('div', 'modal');
      let content = createDomeNode('div', 'modal__content');
-
      let contentHeader = createDomeNode('h3', 'modal__content-header');
      contentHeader.textContent = 'Письмо отправлено';
 
      let contentDescription = createDomeNode('p', 'modal__content-description');
      contentDescription.innerHTML = generateTextDescription(subject, description);
+
 
      modal.append(content);
      modal.append(contentHeader);
@@ -247,8 +247,8 @@
      }
  }
 
- function createButton(value, id) {
-     let button = createDomeNode('button', 'modal__close');
+ function createButton(value, id, ...classes) {
+     let button = createDomeNode('button', ...classes);
      button.textContent = value;
      button.id = id;
      return button;
@@ -264,14 +264,13 @@
      quote.prepend(createModalBase());
  }
 
- function createDomeNode(element, ...classes) {
-     let node = document.createElement(element);
-     node.classList.add(...classes);
+ function createDomeNode(element, elementClass, baseElement = document) {
+     let node = baseElement.createElement(element);
+     node.classList.add(elementClass);
      return node;
  }
 
  modalCloseBtn.addEventListener('click', function() {
      overlay.remove();
      form.reset();
-
  })
