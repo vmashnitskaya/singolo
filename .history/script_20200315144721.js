@@ -271,7 +271,8 @@
  }
 
  modalCloseBtn.addEventListener('click', function() {
-     overlay.remove();
+     overlay.style.display = 'none';
+     form.submit();
      form.reset();
 
  })
