@@ -196,7 +196,7 @@
      if (name.value != '' && email.value != '' && email.value.match(emailRegEx)) {
          event.preventDefault();
          error.innerHTML = '';
-         appendOverlayModal();
+         appendOverlayModal(quote);
      }
  });
 
@@ -212,8 +212,8 @@
  let quote = document.querySelector('#quote');
  let subject = document.querySelector('#subject');
  let description = document.querySelector('#description');
- let modalCloseBtn = createButton('OK', 'modal__close', 'modal__close');
- let overlay = createDomeNode('div', 'overlay_modal')
+ let overlay = createDomeNode('div', 'overlay_modal');
+ let modalCloseBtn;
 
  function createModalContent() {
      let modal = createDomeNode('div', 'modal');
@@ -224,6 +224,14 @@
      let contentDescription = createDomeNode('p', 'modal__content-description');
      contentDescription.innerHTML = generateTextDescription(subject, description);
 
+     modalCloseBtn = createButton('OK', 'modal__close', 'modal__close');
+
+     const handleClose = () => {
+         overlay.remove();
+         form.reset();
+         modalCloseBtn.removeEventListener('click', handleClose);
+     }
+     modalCloseBtn.addEventListener('click', handleClose);
 
      modal.append(content);
      modal.append(contentHeader);
@@ -260,8 +268,8 @@
      return overlay;
  }
 
- function appendOverlayModal() {
-     quote.prepend(createModalBase());
+ function appendOverlayModal(section) {
+     section.prepend(createModalBase());
  }
 
  function createDomeNode(element, elementClass, baseElement = document) {
@@ -269,8 +277,3 @@
      node.classList.add(elementClass);
      return node;
  }
-
- modalCloseBtn.addEventListener('click', function() {
-     overlay.remove();
-     form.reset();
- })
