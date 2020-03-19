@@ -254,6 +254,7 @@ section.slider {
     left: 126px;
     top: 64px;
     border-radius: 2px;
+    cursor: pointer;
 }
 
 .slider .slider__block .slides .phone2 {
