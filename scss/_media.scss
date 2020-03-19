@@ -1,0 +1,58 @@
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 768px;
+        width: 100%;
+    }
+    section.slider {
+        height: 452px;
+        .slider__wrapper {
+            padding: 41px 27px 47px 30px;
+            button {
+                top: 211px;
+                .left-button {
+                    left: 30px;
+                }
+                .right-button {
+                    left: 41px;
+                }
+            }
+            .slider__block {
+                .slides {
+                    .phone {
+                        &1 {
+                            width: 143px;
+                            height: 253px;
+                            left: 97px;
+                            top: 48px;
+                        }
+                        &2 {
+                            width: 254px;
+                            height: 143px;
+                            right: 150px;
+                            top: 100px;
+                        }
+                    }
+                    .slide {
+                        .phone {
+                            &-one {
+                                width: 181px;
+                                height: 364px;
+                            }
+                            &-two {
+                                width: 364px;
+                                height: 181px;
+                            }
+                            &-three {
+                                height: 364px;
+                            }
+                            &-one+.phone-two {
+                                margin-left: 54px;
+                                transform: translateY(-94px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

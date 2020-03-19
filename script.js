@@ -80,6 +80,94 @@
      }
  });
 
+ const swipeDetect = (el) => {
+     let surface = el;
+
+     let startX = 0;
+     let startY = 0;
+     let distX = 0;
+     let distY = 0;
+
+     let startTime = 0;
+     let elapsedTime = 0;
+
+     let threshold = 150;
+     let restraint = 100;
+     let allowedTime = 300;
+
+     surface.addEventListener('mousedown', function(e) {
+         startX = e.pageX;
+         startY = e.pageY;
+         startTime = new Date().getTime();
+         e.preventDefault();
+     })
+     surface.addEventListener('mouseup', function(e) {
+         distX = e.pageX - startX;
+         distY = e.pageY - startY;
+
+         elapsedTime = new Date().getTime() - startTime;
+
+         if (elapsedTime <= allowedTime) {
+             if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+                 if (distX > 0) {
+                     if (isEnabled) {
+                         previousSlide(currentSlide);
+                     }
+                 } else
+                 if (isEnabled) {
+                     nextSlide(currentSlide);
+                 }
+             }
+         }
+         e.preventDefault();
+     })
+
+
+     surface.addEventListener('touchstart', function(e) {
+         if (e.target.classList.contains('left-button') || e.target.classList.contains('right-button')) {
+             if (e.target.classList.contains('left-button')) {
+                 previousSlide(currentSlide);
+             } else if (e.target.classList.contains('right-button')) {
+                 nextSlide(currentSlide);
+             }
+         }
+
+         let touchObject = e.changedTouches[0];
+         startX = touchObject.pageX;
+         startY = touchObject.pageY;
+         startTime = new Date().getTime();
+         e.preventDefault();
+     })
+
+     surface.addEventListener('touchmove', function(e) {
+         e.preventDefault();
+     })
+
+     surface.addEventListener('touchend', function(e) {
+         let touchObject = e.changedTouches[0];
+         distX = touchObject.pageX - startX;
+         distY = touchObject.pageY - startY;
+
+         elapsedTime = new Date().getTime() - startTime;
+
+         if (elapsedTime <= allowedTime) {
+             if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+                 if (distX > 0) {
+                     if (isEnabled) {
+                         previousSlide(currentSlide);
+                     }
+                 } else
+                 if (isEnabled) {
+                     nextSlide(currentSlide);
+                 }
+             }
+         }
+         e.preventDefault();
+     })
+ }
+ let swiper = document.querySelector('.slider__wrapper');
+ swipeDetect(swiper);
+
  //Disable phones
  let verticalPhoneDisabled = document.querySelector('.phone1');
  let horizontalPhoneDisabled = document.querySelector('.phone2');
