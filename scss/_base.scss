@@ -126,14 +126,14 @@ section.slider {
     border-bottom: 6px solid #ea676b;
 }
 
-.slider .slider__wrapper {
+.slider .slider__block {
     position: relative;
     width: 100%;
     height: 100%;
     padding: 53px 40px 58px 39px;
 }
 
-.slider .slider__wrapper .slider__block {
+.slider .slider__block .slider__wrapper{
     position: absolute;
     width: 100%;
     top: 50%;
@@ -142,7 +142,7 @@ section.slider {
     transform: translate(-50%, -50%);
 }
 
-.slider .slider__wrapper button {
+.slider .slider__block button {
     position: absolute;
     top: 280px;
     width: 16px;
@@ -153,56 +153,56 @@ section.slider {
     cursor: pointer;
 }
 
-.slider .slider__wrapper button.left-button {
+.slider .slider__block button.left-button {
     background-image: url(assets/icons/slider/left.svg);
     left: 42px;
     right: auto;
 }
 
-.slider .slider__wrapper button.right-button {
+.slider .slider__block button.right-button {
     background-image: url(assets/icons/slider/right.svg);
     right: 39px;
     left: auto;
 }
 
-.slider .slider__wrapper .slider__block .slides {
+.slider .slider__block.slider__wrapper .slides {
     position: relative;
     width: 100%;
     overflow: hidden;
 }
 
-.slider .slider__wrapper .slider__block .slide {
+.slider .slider__block .slider__wrapper .slide {
     display: none;
     position: relative;
     animation: 1.2s ease-in-out;
     margin: 0 auto;
 }
 
-.slider .slider__wrapper .slider__block .slide.active,
-.slider .slider__wrapper .slider__block .slide.next {
+.slider .slider__block .slider__wrapper .slide.active,
+.slider .slider__block .slider__wrapper .slide.next {
     display: block;
 }
 
-.slider .slider__wrapper .slider__block .slide.next {
+.slider .slider__block .slider__wrapper .slide.next {
     position: absolute;
     top: 0;
     width: 100%;
 }
 
-.slider .slider__wrapper .slider__block .slide.to-left {
+.slider .slider__block .slider__wrapper .slide.to-left {
     animation-name: left;
 }
 
-.slider .slider__wrapper .slider__block .slide.from-right {
+.slider .slider__block .slider__wrapper .slide.from-right {
     animation-name: right;
 }
 
-.slider .slider__wrapper .slider__block .slide.to-right {
+.slider .slider__block .slider__wrapper .slide.to-right {
     animation-name: right;
     animation-direction: reverse;
 }
 
-.slider .slider__wrapper .slider__block .slide.from-left {
+.slider .slider__block .slider__wrapper .slide.from-left {
     animation-name: left;
     animation-direction: reverse;
 }
@@ -225,7 +225,7 @@ section.slider {
     }
 }
 
-.slider .slider__wrapper .slider__block .slides .slide .phone-one {
+.slider .slider__block .slider__wrapper .slides .slide .phone-one {
     display: inline-block;
     width: 240px;
     height: 483px;
@@ -233,7 +233,7 @@ section.slider {
     cursor: pointer;
 }
 
-.slider .slider__wrapper .slider__block .slides .slide .phone-two {
+.slider .slider__block .slider__wrapper .slides .slide .phone-two {
     display: inline-block;
     width: 486px;
     height: 241px;
@@ -241,17 +241,17 @@ section.slider {
     cursor: pointer;
 }
 
-.slider .slider__wrapper .slider__block .slides .slide .phone-three {
+.slider .slider__block .slider__wrapper .slides .slide .phone-three {
     display: inline-block;
     height: 483px;
 }
 
-.slider .slider__wrapper .slider__block .slides .phone1.disabled,
-.slider .slider__wrapper .slider__block .slides .phone2.disabled {
+.slider .slider__block .slider__wrapper .slides .phone1.disabled,
+.slider .slider__block .slider__wrapper .slides .phone2.disabled {
     display: none;
 }
 
-.slider .slider__wrapper .slider__block .slides .phone1 {
+.slider .slider__block .slider__wrapper .slides .phone1 {
     position: absolute;
     z-index: 3;
     background-color: #2d303a;
@@ -263,7 +263,7 @@ section.slider {
     cursor: pointer;
 }
 
-.slider .slider__wrapper .slider__block .slides .phone2 {
+.slider .slider__block .slider__wrapper .slides .phone2 {
     position: absolute;
     z-index: 3;
     background-color: #2d303a;
@@ -275,7 +275,7 @@ section.slider {
     cursor: pointer;
 }
 
-.slider .slider__wrapper .slider__block .slides .phone-one+.phone-two {
+.slider .slider__block .slider__wrapper .slides .phone-one+.phone-two {
     margin-left: 75px;
 }
 
@@ -311,7 +311,6 @@ section.services {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    min-height: 208px;
     margin-top: 44px;
     margin-right: 1px;
 }

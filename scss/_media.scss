@@ -1,7 +1,122 @@
+@media screen and (max-width: 995px) {
+    .container {
+        width: 100%;
+        max-width: 995px;
+    }
+    .slider {
+        .slider__wrapper {
+            padding-right: 30px;
+            padding-left: 30px;
+            button.left-button {
+                left: 30px;
+            }
+            button.right-button {
+                right: 30px;
+            }
+            .slider__block {
+                .slides {
+                    .slide {
+                        .phone {
+                            &-one {
+                                width: 220px;
+                                height: 440px;
+                            }
+                            &-two {
+                                width: 440px;
+                                height: 220px;
+                            }
+                            &-three {
+                                height: 440px;
+                            }
+                            &-one+.phone-two {
+                                margin-left: 48px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .services {
+        min-height: 500px;
+        .services__block {
+            padding-right: 30px;
+            padding-left: 30px;
+            .services__items {
+                .services__item {
+                    width: 250px;
+                    &.image {
+                        width: 40px;
+                        height: 40px;
+                        img {
+                            width: 25px;
+                            height: 25px;
+                        }
+                    }
+                    &-column {
+                        width: 180px;
+                        margin-left: 15px;
+                        .description {
+                            min-height: 70px;
+                            line-height: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section.portfolio {
+        .portfolio__block {
+            padding-right: 16px;
+            padding-left: 30px;
+            .portfolio__images {
+                width: 100%;
+                justify-content: space-between;
+                .portfolio__image {
+                    margin-right: 14px;
+                    &:nth-child(4n) {
+                        margin-right: 14px;
+                        ;
+                    }
+                }
+            }
+        }
+    }
+    section.about {
+        .about__block {
+            padding-right: 30px;
+            padding-left: 30px;
+            .about__persons {
+                width: 100%;
+                .about__person {
+                    width: 250px;
+                    margin-right: 14px;
+                    .photo {
+                        width: 250px;
+                        height: 250px;
+                    }
+                }
+            }
+        }
+    }
+    section.quote {
+        .quote__block {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+    }
+    footer {
+        .footer__block {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     .container {
-        max-width: 768px;
         width: 100%;
+        max-width: 768px;
     }
     section.slider {
         height: 452px;

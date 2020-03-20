@@ -353,7 +353,6 @@ section.services {
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  min-height: 208px;
   margin-top: 44px;
   margin-right: 1px;
 }
@@ -967,10 +966,106 @@ dal__close:active {
   background-color: #E1B255;
 }
 
+@media screen and (max-width: 995px) {
+  .container {
+    width: 100%;
+    max-width: 995px;
+  }
+  .slider .slider__wrapper {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .slider .slider__wrapper button.left-button {
+    left: 30px;
+  }
+  .slider .slider__wrapper button.right-button {
+    right: 30px;
+  }
+  .slider .slider__wrapper .slider__block .slides .slide .phone-one {
+    width: 220px;
+    height: 440px;
+  }
+  .slider .slider__wrapper .slider__block .slides .slide .phone-two {
+    width: 440px;
+    height: 220px;
+  }
+  .slider .slider__wrapper .slider__block .slides .slide .phone-three {
+    height: 440px;
+  }
+  .slider .slider__wrapper .slider__block .slides .slide .phone-one + .phone-two {
+    margin-left: 48px;
+  }
+  .services {
+    min-height: 500px;
+  }
+  .services .services__block {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .services .services__block .services__items .services__item {
+    width: 250px;
+  }
+  .services .services__block .services__items .services__item.image {
+    width: 40px;
+    height: 40px;
+  }
+  .services .services__block .services__items .services__item.image img {
+    width: 25px;
+    height: 25px;
+  }
+  .services .services__block .services__items .services__item-column {
+    width: 180px;
+    margin-left: 15px;
+  }
+  .services .services__block .services__items .services__item-column .description {
+    min-height: 70px;
+    line-height: 18px;
+  }
+  section.portfolio .portfolio__block {
+    padding-right: 16px;
+    padding-left: 30px;
+  }
+  section.portfolio .portfolio__block .portfolio__images {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section.portfolio .portfolio__block .portfolio__images .portfolio__image {
+    margin-right: 14px;
+  }
+  section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(4n) {
+    margin-right: 14px;
+  }
+  section.about .about__block {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  section.about .about__block .about__persons {
+    width: 100%;
+  }
+  section.about .about__block .about__persons .about__person {
+    width: 250px;
+    margin-right: 14px;
+  }
+  section.about .about__block .about__persons .about__person .photo {
+    width: 250px;
+    height: 250px;
+  }
+  section.quote .quote__block {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  footer .footer__block {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .container {
-    max-width: 768px;
     width: 100%;
+    max-width: 768px;
   }
   section.slider {
     height: 452px;
