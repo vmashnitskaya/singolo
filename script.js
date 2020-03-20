@@ -165,7 +165,7 @@
          e.preventDefault();
      })
  }
- let swiper = document.querySelector('.slider__wrapper');
+ let swiper = document.querySelector('.slider__block');
  swipeDetect(swiper);
 
  //Disable phones
