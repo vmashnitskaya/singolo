@@ -1371,13 +1371,6 @@ footer .media {
     width: 100%;
     max-width: 350px;
   }
-  .navbar__mobile {
-    padding-left: 50px;
-    width: 200px;
-  }
-  .navbar__mobile h1 {
-    margin-left: 12px;
-  }
   .services__block .services__items .services__item {
     width: 280px;
   }
