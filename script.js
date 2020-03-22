@@ -1,3 +1,21 @@
+ //Mobile navigation menu
+ let burger = document.querySelector('#header__burger');
+ let mobileNavbar = document.querySelector('#navbar__mobile');
+ burger.addEventListener('click', function() {
+     openCloseMobileMenu();
+ })
+
+ function openCloseMobileMenu() {
+     if (mobileNavbar.classList.contains('hidden')) {
+         mobileNavbar.classList.remove('hidden');
+         burger.classList.add('active');
+     } else {
+         mobileNavbar.classList.add('hidden');
+         burger.classList.remove('active');
+     }
+ }
+
+
  //Navigation
  let navigationContainer = document.querySelector('.header__navigation');
  let navigationLinks = document.querySelectorAll('.navigation');
@@ -17,6 +35,7 @@
  });
 
  //Slider
+ let sectionSlider = document.querySelector('#slider');
  let slides = document.querySelectorAll('.slide');
  let leftButton = document.querySelector('.left-button');
  let rightButton = document.querySelector('.right-button');
@@ -45,15 +64,29 @@
  }
 
  function previousSlide(n) {
-     hideSlide('to-right')
-     changeCurrentSlide(n - 1)
-     showSlide('from-left')
+     hideSlide('to-right');
+     changeCurrentSlide(n - 1);
+     showSlide('from-left');
+     changeSectionDesign();
  }
 
  function nextSlide(n) {
-     hideSlide('to-left')
-     changeCurrentSlide(n + 1)
-     showSlide('from-right')
+     hideSlide('to-left');
+     changeCurrentSlide(n + 1);
+     showSlide('from-right');
+     changeSectionDesign();
+ }
+
+ function changeSectionDesign() {
+     if (sectionSlider.classList.contains('colored')) {
+         sectionSlider.classList.remove('colored');
+         leftButton.classList.remove('blue');
+         rightButton.classList.remove('blue');
+     } else {
+         sectionSlider.classList.add('colored');
+         leftButton.classList.add('blue');
+         rightButton.classList.add('blue');
+     }
  }
 
  function hideDisabledScreen() {
@@ -99,6 +132,7 @@
          startX = e.pageX;
          startY = e.pageY;
          startTime = new Date().getTime();
+         hideDisabledScreen();
          e.preventDefault();
      })
      surface.addEventListener('mouseup', function(e) {
@@ -111,10 +145,12 @@
              if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
                  if (distX > 0) {
                      if (isEnabled) {
+
                          previousSlide(currentSlide);
                      }
                  } else
                  if (isEnabled) {
+
                      nextSlide(currentSlide);
                  }
              }
@@ -150,14 +186,17 @@
 
          elapsedTime = new Date().getTime() - startTime;
 
+
          if (elapsedTime <= allowedTime) {
              if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
                  if (distX > 0) {
                      if (isEnabled) {
+                         hideDisabledScreen();
                          previousSlide(currentSlide);
                      }
                  } else
                  if (isEnabled) {
+                     hideDisabledScreen();
                      nextSlide(currentSlide);
                  }
              }
@@ -174,27 +213,46 @@
  let verticalPhone = document.querySelector('.phone-one');
  let horizontalPhone = document.querySelector('.phone-two');
 
+
  verticalPhone.addEventListener('click', function() {
      disablePhone(verticalPhoneDisabled);
  });
  verticalPhoneDisabled.addEventListener('click', function() {
      disablePhone(verticalPhoneDisabled);
- })
+ });
  horizontalPhone.addEventListener('click', function() {
      disablePhone(horizontalPhoneDisabled);
  });
-
  horizontalPhoneDisabled.addEventListener('click', function() {
      disablePhone(horizontalPhoneDisabled);
  });
 
+ verticalPhone.addEventListener('touchstart', function() {
+     disablePhone(verticalPhoneDisabled);
+
+ });
+ horizontalPhone.addEventListener('touchstart', function() {
+     disablePhone(horizontalPhoneDisabled);
+ });
+ horizontalPhoneDisabled.addEventListener('touchstart', function() {
+     disablePhone(horizontalPhoneDisabled);
+ });
+ verticalPhoneDisabled.addEventListener('touchstart', function() {
+     disablePhone(verticalPhoneDisabled);
+ });
+
+
  function disablePhone(phoneType) {
-     if (phoneType.classList.contains('disabled')) {
-         phoneType.classList.remove('disabled');
-     } else {
-         phoneType.classList.add('disabled');
+     if (screen.width == 375 || screen.width == 768 || screen.width >= 1020) {
+         if (phoneType.classList.contains('disabled')) {
+             phoneType.classList.remove('disabled');
+         } else {
+             phoneType.classList.add('disabled');
+         }
      }
  }
+
+
 
  //Select tag and mix images
  let tags = document.querySelectorAll('.portfolio__tag');
@@ -239,7 +297,7 @@
  let emailRegEx = /^[0-9a-z-\.]+\@[0-9a-z-]{2,}\.[a-z]{2,}$/i;
 
  function validationRequired(input) {
-     error.innerHTML = 'Please provide values to all fields highlighted above'
+     error.innerHTML = 'Пожалуйста, запоните обязательные поля'
      input.classList.add('required')
      event.preventDefault()
  }
@@ -252,7 +310,7 @@
 
  function validateEmailValue(input) {
      if (!input.value.match(emailRegEx) && input.value != '') {
-         error.innerHTML = 'Provided e-mail address is incorrect.'
+         error.innerHTML = 'Неправильный формат электронной почты'
          event.preventDefault();
      }
  }

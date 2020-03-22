@@ -10,9 +10,29 @@
 </head>
 
 <body>
+    <aside class="navbar__mobile" id="navbar__mobile">
+        <h1 class="logo">SINGOLO<span>*</span>
+            <nav>
+                <ul class="header__navigation">
+                    <li scroll-to="header" class="navigation active">HOME</li>
+                    <li scroll-to="services" class="navigation">SERVICES
+                    </li>
+                    <li scroll-to="portfolio" class="navigation">PORTFOLIO</li>
+                    <li scroll-to="about_us" class="navigation">ABOUT</li>
+                    <li scroll-to="quote" class="navigation">CONTACT</li>
+            </nav>
+    </aside>
+    </li>
+    </ul>
+    </a>
     <header id="header">
         <div class="container">
             <div class="header__block">
+                <div class="header__burger" id="header__burger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
                 <a href="#">
                     <h1 class="logo">SINGOLO<span>*</span>
                     </h1>
@@ -32,7 +52,7 @@
             </div>
     </header>
     <main>
-        <section class="slider">
+        <section class="slider" id="slider">
             <div class="container">
                 <div class="slider__block">
                     <div class="slider__wrapper">
@@ -132,16 +152,6 @@
                         <div class="portfolio__image"><img class='image' src="assets/images/portfolio/monster.png" alt="monster"></div>
                         <div class="portfolio__image"><img class='image' src="assets/images/portfolio/drawing.png" alt="drawing"></div>
                     </div>
-                    <div class="portfolio__images_mobile">
-                        <div class="portfolio__image"><img class='image' src="assets/images/portfolio/ship_mobile.png" alt="ship"></div>
-                        <div class="portfolio__image"><img class='image' src="assets/images/portfolio/ice_cream_mobile.png" alt="girl_with_ice_cream"></div>
-                        <div class="portfolio__image"><img class='image' src="assets/images/portfolio/city_mobile.png" alt="city"></div>
-                        <div class="portfolio__image"><img class='image' src="assets/images/portfolio/robot_with_heart_mobile.png" alt="robot_with_heart"></div>
-                        <div class="portfolio__image"><img class='image' src="assets/images/portfolio/animals_mobile.png" alt="animals"></div>
-                        <div class="portfolio__image"><img class='image' src="assets/images/portfolio/ide_mobile.png" alt="ide"></div>
-                        <div class="portfolio__image"><img class='image' src="assets/images/portfolio/robots_mobile.png" alt="robots"></div>
-                        <div class="portfolio__image"><img class='image' src="assets/images/portfolio/hens_mobile.png" alt="hens"></div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -153,7 +163,7 @@
                     </p>
                     <div class="about__persons">
                         <div class="about__person">
-                            <div class="photo first"></div>
+                            <div class="photo first"><img src="assets/images/about_us/first_person.png" alt="first_person"></div>
                             <h3 class="header">Adam Jensen</h3>
                             <p class="description">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
                             <div class="media">
@@ -172,7 +182,7 @@
                             </div>
                         </div>
                         <div class="about__person">
-                            <div class="photo second"></div>
+                            <div class="photo second"><img src="assets/images/about_us/second_person.png" alt="second_person"></div>
                             <h3 class="header">Desmond Miles</h3>
                             <p class="description">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
                             <div class="media">
@@ -191,7 +201,7 @@
                             </div>
                         </div>
                         <div class="about__person">
-                            <div class="photo third"></div>
+                            <div class="photo third"><img src="assets/images/about_us/third_person.png" alt="third_person"></div>
                             <h3 class="header">Scolara Visari</h3>
                             <p class="description">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
                             <div class="media">
