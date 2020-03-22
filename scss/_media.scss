@@ -194,6 +194,7 @@
     header {
         height: 71px;
         .header__block {
+            position: relative;
             height: 100%;
             justify-content: center;
             padding: 26px 20px 0 20px;
@@ -211,7 +212,7 @@
                 &.active {
                     transform: rotate(90deg);
                 }
-                .line {
+                div {
                     width: 25px;
                     height: 2.4px;
                     margin-top: 7px;

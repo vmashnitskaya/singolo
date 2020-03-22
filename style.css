@@ -1150,6 +1150,7 @@ footer .media {
     height: 71px;
   }
   header .header__block {
+    position: relative;
     height: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1172,14 +1173,14 @@ footer .media {
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
   }
-  header .header__block .header__burger .line {
+  header .header__block .header__burger div {
     width: 25px;
     height: 2.4px;
     margin-top: 7px;
     background-color: #FFFFFF;
     border-radius: 5px;
   }
-  header .header__block .header__burger .line:first-child {
+  header .header__block .header__burger div:first-child {
     margin-top: 0;
   }
   header .header__block nav {
