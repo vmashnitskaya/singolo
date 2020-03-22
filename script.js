@@ -132,7 +132,6 @@
          startX = e.pageX;
          startY = e.pageY;
          startTime = new Date().getTime();
-         hideDisabledScreen();
          e.preventDefault();
      })
      surface.addEventListener('mouseup', function(e) {
