@@ -1382,7 +1382,7 @@ footer .media {
     width: 180px;
   }
   section.portfolio {
-    min-height: 791px;
+    min-height: 757px;
   }
   section.portfolio .portfolio__block .portfolio__tags .portfolio__tag {
     padding: 0 4px;
@@ -1395,7 +1395,7 @@ footer .media {
             align-items: flex-start;
     width: 100%;
     min-width: 260px;
-    height: 500px;
+    height: 465px;
   }
   section.portfolio .portfolio__block .portfolio__images .portfolio__image {
     width: 123px;
