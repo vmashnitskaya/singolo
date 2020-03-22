@@ -1381,6 +1381,9 @@ footer .media {
   .services__block .services__items .services__item .services__item-column {
     width: 180px;
   }
+  section.portfolio .portfolio__block {
+    height: 100%;
+  }
   section.portfolio .portfolio__block .portfolio__tags .portfolio__tag {
     padding: 0 4px;
     margin-right: 4px;
@@ -1389,26 +1392,38 @@ footer .media {
   section.portfolio .portfolio__block .portfolio__images {
     width: 100%;
     min-width: 260px;
-    height: 553px;
+    min-height: 500px;
   }
   section.portfolio .portfolio__block .portfolio__images .portfolio__image {
     width: 123px;
     height: 104px;
   }
-  section.about .about__block .about__persons {
+  section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(9) {
+    display: none;
+  }
+  section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(10) {
+    display: none;
+  }
+  section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(11) {
+    display: none;
+  }
+  section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(12) {
+    display: none;
+  }
+  section.portfolio section.about .about__block .about__persons {
     min-width: 260px;
   }
-  section.about .about__block .about__persons .about__person {
+  section.portfolio section.about .about__block .about__persons .about__person {
     max-width: 260px;
   }
-  section.about .about__block .about__persons .about__person .photo img {
+  section.portfolio section.about .about__block .about__persons .about__person .photo img {
     max-height: 260px;
   }
-  section.quote {
+  section.portfolio section.quote {
     height: 105%;
     max-height: 990px;
   }
-  .modal {
+  section.portfolio .modal {
     bottom: 450px;
     width: 270px;
     height: 250px;
