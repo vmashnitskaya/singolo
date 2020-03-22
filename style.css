@@ -1381,8 +1381,8 @@ footer .media {
   .services__block .services__items .services__item .services__item-column {
     width: 180px;
   }
-  section.portfolio .portfolio__block {
-    height: 100%;
+  section.portfolio {
+    min-height: 791px;
   }
   section.portfolio .portfolio__block .portfolio__tags .portfolio__tag {
     padding: 0 4px;
@@ -1395,7 +1395,7 @@ footer .media {
             align-items: flex-start;
     width: 100%;
     min-width: 260px;
-    max-height: 475px;
+    height: 500px;
   }
   section.portfolio .portfolio__block .portfolio__images .portfolio__image {
     width: 123px;
@@ -1413,20 +1413,23 @@ footer .media {
   section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(12) {
     display: none;
   }
-  section.portfolio section.about .about__block .about__persons {
+  section.about .about__block .about__persons {
     min-width: 260px;
   }
-  section.portfolio section.about .about__block .about__persons .about__person {
+  section.about .about__block .about__persons .about__person {
     max-width: 260px;
   }
-  section.portfolio section.about .about__block .about__persons .about__person .photo img {
+  section.about .about__block .about__persons .about__person .photo img {
     max-height: 260px;
   }
-  section.portfolio section.quote {
+  section.quote {
     height: 105%;
-    max-height: 990px;
+    max-height: 996px;
   }
-  section.portfolio .modal {
+  section.quote .quote__block .quote__wrapper .quote__contacts {
+    margin-top: 28px;
+  }
+  .modal {
     bottom: 450px;
     width: 270px;
     height: 250px;
