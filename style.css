@@ -1390,9 +1390,12 @@ footer .media {
     font-size: 11px;
   }
   section.portfolio .portfolio__block .portfolio__images {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     width: 100%;
     min-width: 260px;
-    min-height: 500px;
+    max-height: 475px;
   }
   section.portfolio .portfolio__block .portfolio__images .portfolio__image {
     width: 123px;

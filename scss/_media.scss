@@ -427,9 +427,10 @@
                             }
                         }
                         .portfolio__images {
+                            align-items: flex-start;
                             width: 100%;
                             min-width: 260px;
-                            min-height: 500px;
+                            max-height: 475px;
                             .portfolio__image {
                                 width: 123px;
                                 height: 104px;
