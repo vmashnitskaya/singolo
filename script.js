@@ -1,6 +1,8 @@
  //Mobile navigation menu
  let burger = document.querySelector('#header__burger');
  let mobileNavbar = document.querySelector('#navbar__mobile');
+ let mobileNavigation = document.querySelector('.mobile__navigation');
+
  burger.addEventListener('click', function() {
      openCloseMobileMenu();
  })
@@ -15,6 +17,14 @@
      }
  }
 
+ mobileNavigation.addEventListener('click', function(event) {
+
+     addClassToOneElement(event.target, 'active', navigationLinks);
+
+     document
+         .getElementById(event.target.getAttribute('scroll-to'))
+         .scrollIntoView({ behavior: 'smooth' });
+ });
 
  //Navigation
  let navigationContainer = document.querySelector('.header__navigation');
@@ -31,7 +41,7 @@
 
      document
          .getElementById(event.target.getAttribute('scroll-to'))
-         .scrollIntoView({ behavior: 'smooth' })
+         .scrollIntoView({ behavior: 'smooth' });
  });
 
  //Slider
