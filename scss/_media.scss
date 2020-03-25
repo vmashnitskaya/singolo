@@ -76,7 +76,7 @@
         }
     }
     section.portfolio {
-        height: 150vw;
+        height: 138vw;
         max-height: 1102px;
         .portfolio__block {
             width: 100%;
@@ -84,7 +84,7 @@
                 justify-content: space-between;
                 width: 100%;
                 min-width: 700px;
-                height: 814px;
+                height: 800px;
                 .portfolio__image {
                     width: 216px;
                     height: 183px;
@@ -98,6 +98,8 @@
         }
     }
     section.about {
+        height: 130vw;
+        max-height: 690px;
         .about__block {
             .about__persons {
                 justify-content: flex-start;
@@ -114,6 +116,7 @@
     }
     section.quote {
         .quote__block {
+            padding-bottom: 40px;
             .quote__wrapper {
                 margin-top: 30px;
                 form input,
