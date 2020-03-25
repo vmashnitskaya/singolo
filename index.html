@@ -6,13 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Singolo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <aside class="navbar__mobile hidden" id="navbar__mobile">
+        <h1 class="logo">SINGOLO<span>*</span>
+            <nav>
+                <ul class="mobile__navigation">
+                    <li scroll-to="header" class="navigation active">HOME</li>
+                    <li scroll-to="services" class="navigation">SERVICES</li>
+                    <li scroll-to="portfolio" class="navigation">PORTFOLIO</li>
+                    <li scroll-to="about_us" class="navigation">ABOUT</li>
+                    <li scroll-to="quote" class="navigation">CONTACT</li>
+                </ul>
+            </nav>
+    </aside>
     <header id="header">
         <div class="container">
             <div class="header__block">
+                <div class="header__burger" id="header__burger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
                 <a href="#">
                     <h1 class="logo">SINGOLO<span>*</span>
                     </h1>
@@ -32,23 +50,25 @@
             </div>
     </header>
     <main>
-        <section class="slider">
+        <section class="slider" id="slider">
             <div class="container">
                 <div class="slider__block">
-                    <div class="slides">
-                        <div id="phone1" class="phone1 disabled"></div>
-                        <div id="phone2" class="phone2 disabled"></div>
-                        <div class="slide active">
-                            <img src="assets/images/slider/phone_vertical.png" alt="phone_vertical" class="phone-one">
-                            <img src="assets/images/slider/phone_horizontal.png" alt="phone_horizontal" class="phone-two">
-                        </div>
-                        <div class="slide">
-                            <img src="assets/images/slider/phones_vertical.png" alt="phones_vertical" class="phone-three">
+                    <div class="slider__wrapper">
+                        <div class="slides">
+                            <div id="phone1" class="phone1 disabled"></div>
+                            <div id="phone2" class="phone2 disabled"></div>
+                            <div class="slide active">
+                                <img src="assets/images/slider/phone_vertical.png" alt="phone_vertical" class="phone-one">
+                                <img src="assets/images/slider/phone_horizontal.png" alt="phone_horizontal" class="phone-two">
+                            </div>
+                            <div class="slide">
+                                <img src="assets/images/slider/phones_vertical.png" alt="phones_vertical" class="phone-three">
+                            </div>
                         </div>
                     </div>
+                    <button class="left-button" type="button"></button>
+                    <button class="right-button" type="button"></button>
                 </div>
-                <button class="left-button" type="button"></button>
-                <button class="right-button" type="button"></button>
             </div>
         </section>
         <section class="services" id="services">
@@ -70,7 +90,7 @@
                             <div class="services__item image"><img src="assets/icons/services/bulb.svg" alt="bulb"></div>
                             <div class="services__item-column">
                                 <h3 class="header">Inovative Ideas</h3>
-                                <p class="description">Quisque luctus, quam eget molestie com-<br>modo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+                                <p class="description">Quisque luctus, quam eget molestie com- modo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
                             </div>
                         </div>
                         <div class="services__item">
@@ -84,14 +104,14 @@
                             <div class="services__item image"><img src="assets/icons/services/phone.svg" alt="phone"></div>
                             <div class="services__item-column">
                                 <h3 class="header">Responsive Layout</h3>
-                                <p class="description">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Prae-<br>sent elit leo.</p>
+                                <p class="description">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Prae- sent elit leo.</p>
                             </div>
                         </div>
                         <div class="services__item">
                             <div class="services__item image"><img src="assets/icons/services/bubble.svg" alt="bubble"></div>
                             <div class="services__item-column">
                                 <h3 class="header">24 / 7 Support</h3>
-                                <p class="description">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a semerat. Pellen-<br>tesque egestas venenatis lorem.</p>
+                                <p class="description">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a semerat. Pellen- tesque egestas venenatis lorem.</p>
                             </div>
                         </div>
                         <div class="services__item">
@@ -107,90 +127,94 @@
         </section>
         <section class="portfolio" id="portfolio">
             <div class="container">
-                <h2 class="portfolio header">Portfolio</h2>
-                <p class="portfolio description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-                <div class="portfolio__tags">
-                    <div class="portfolio__tag tag-active">All</div>
-                    <div class="portfolio__tag">Web Design</div>
-                    <div class="portfolio__tag">Graphic Design</div>
-                    <div class="portfolio__tag">Artwork</div>
-                </div>
-                <div class="portfolio__images">
-                    <div class="portfolio__image"><img class='image' src="assets/images/portfolio/ship.png" alt="ship"></div>
-                    <div class="portfolio__image"><img class='image' src="assets/images/portfolio/ice_cream.png" alt="girl_with_ice_cream"></div>
-                    <div class="portfolio__image"><img class='image' src="assets/images/portfolio/city.png" alt="city"></div>
-                    <div class="portfolio__image"><img class='image' src="assets/images/portfolio/robot_with_heart.png" alt="robot_with_heart"></div>
-                    <div class="portfolio__image"><img class='image' src="assets/images/portfolio/animals.png" alt="animals"></div>
-                    <div class="portfolio__image"><img class='image' src="assets/images/portfolio/ide.png" alt="ide"></div>
-                    <div class="portfolio__image"><img class='image' src="assets/images/portfolio/robots.png" alt="robots"></div>
-                    <div class="portfolio__image"><img class='image' src="assets/images/portfolio/hens.png" alt="hens"></div>
-                    <div class="portfolio__image"><img class='image' src="assets/images/portfolio/hill.png" alt="hill"></div>
-                    <div class="portfolio__image"><img class='image' src="assets/images/portfolio/writing.png" alt="writing"></div>
-                    <div class="portfolio__image"><img class='image' src="assets/images/portfolio/monster.png" alt="monster"></div>
-                    <div class="portfolio__image"><img class='image' src="assets/images/portfolio/drawing.png" alt="drawing"></div>
+                <div class="portfolio__block">
+                    <h2 class="portfolio header">Portfolio</h2>
+                    <p class="portfolio description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                    <div class="portfolio__tags">
+                        <div class="portfolio__tag tag-active">All</div>
+                        <div class="portfolio__tag">Web Design</div>
+                        <div class="portfolio__tag">Graphic Design</div>
+                        <div class="portfolio__tag">Artwork</div>
+                    </div>
+                    <div class="portfolio__images">
+                        <div class="portfolio__image"><img class='image' src="assets/images/portfolio/ship.png" alt="ship"></div>
+                        <div class="portfolio__image"><img class='image' src="assets/images/portfolio/ice_cream.png" alt="girl_with_ice_cream"></div>
+                        <div class="portfolio__image"><img class='image' src="assets/images/portfolio/city.png" alt="city"></div>
+                        <div class="portfolio__image"><img class='image' src="assets/images/portfolio/robot_with_heart.png" alt="robot_with_heart"></div>
+                        <div class="portfolio__image"><img class='image' src="assets/images/portfolio/animals.png" alt="animals"></div>
+                        <div class="portfolio__image"><img class='image' src="assets/images/portfolio/ide.png" alt="ide"></div>
+                        <div class="portfolio__image"><img class='image' src="assets/images/portfolio/robots.png" alt="robots"></div>
+                        <div class="portfolio__image"><img class='image' src="assets/images/portfolio/hens.png" alt="hens"></div>
+                        <div class="portfolio__image"><img class='image' src="assets/images/portfolio/hill.png" alt="hill"></div>
+                        <div class="portfolio__image"><img class='image' src="assets/images/portfolio/writing.png" alt="writing"></div>
+                        <div class="portfolio__image"><img class='image' src="assets/images/portfolio/monster.png" alt="monster"></div>
+                        <div class="portfolio__image"><img class='image' src="assets/images/portfolio/drawing.png" alt="drawing"></div>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="about" id="about_us">
             <div class="container">
-                <h2 class="about header">About Us</h2>
-                <p class="about description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-                </p>
-                <div class="about__persons">
-                    <div class="about__person">
-                        <div class="photo first"></div>
-                        <h3 class="header">Adam Jensen</h3>
-                        <p class="description">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
-                        <div class="media">
-                            <div class="media-site">
-                                <div class="facebook"></div>
-                            </div>
-                            <div class="media-site">
-                                <div class="google"></div>
-                            </div>
-                            <div class="media-site">
-                                <div class="twitter"></div>
-                            </div>
-                            <div class="media-site">
-                                <div class="linkedin"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about__person">
-                        <div class="photo second"></div>
-                        <h3 class="header">Desmond Miles</h3>
-                        <p class="description">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
-                        <div class="media">
-                            <div class="media-site">
-                                <div class="facebook"></div>
-                            </div>
-                            <div class="media-site">
-                                <div class="google"></div>
-                            </div>
-                            <div class="media-site">
-                                <div class="twitter"></div>
-                            </div>
-                            <div class="media-site">
-                                <div class="linkedin"></div>
+                <div class="about__block">
+                    <h2 class="about header">About Us</h2>
+                    <p class="about description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+                    </p>
+                    <div class="about__persons">
+                        <div class="about__person">
+                            <div class="photo first"><img src="assets/images/about_us/first_person.png" alt="first_person"></div>
+                            <h3 class="header">Adam Jensen</h3>
+                            <p class="description">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+                            <div class="media">
+                                <div class="media-site">
+                                    <div class="facebook"></div>
+                                </div>
+                                <div class="media-site">
+                                    <div class="google"></div>
+                                </div>
+                                <div class="media-site">
+                                    <div class="twitter"></div>
+                                </div>
+                                <div class="media-site">
+                                    <div class="linkedin"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="about__person">
-                        <div class="photo third"></div>
-                        <h3 class="header">Scolara Visari</h3>
-                        <p class="description">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
-                        <div class="media">
-                            <div class="media-site">
-                                <div class="facebook"></div>
+                        <div class="about__person">
+                            <div class="photo second"><img src="assets/images/about_us/second_person.png" alt="second_person"></div>
+                            <h3 class="header">Desmond Miles</h3>
+                            <p class="description">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+                            <div class="media">
+                                <div class="media-site">
+                                    <div class="facebook"></div>
+                                </div>
+                                <div class="media-site">
+                                    <div class="google"></div>
+                                </div>
+                                <div class="media-site">
+                                    <div class="twitter"></div>
+                                </div>
+                                <div class="media-site">
+                                    <div class="linkedin"></div>
+                                </div>
                             </div>
-                            <div class="media-site">
-                                <div class="google"></div>
-                            </div>
-                            <div class="media-site">
-                                <div class="twitter"></div>
-                            </div>
-                            <div class="media-site">
-                                <div class="linkedin"></div>
+                        </div>
+                        <div class="about__person">
+                            <div class="photo third"><img src="assets/images/about_us/third_person.png" alt="third_person"></div>
+                            <h3 class="header">Scolara Visari</h3>
+                            <p class="description">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+                            <div class="media">
+                                <div class="media-site">
+                                    <div class="facebook"></div>
+                                </div>
+                                <div class="media-site">
+                                    <div class="google"></div>
+                                </div>
+                                <div class="media-site">
+                                    <div class="twitter"></div>
+                                </div>
+                                <div class="media-site">
+                                    <div class="linkedin"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -198,54 +222,62 @@
             </div>
         </section>
         <section class="quote" id="quote">
-            <h2 class="quote header">Get a Quote</h2>
-            <p class="quote description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-            </p>
-            <div class="quote__block">
-                <form id="form" target="_blank" novalidate>
-                    <input type="text" name="user_name" id="name" placeholder=" Name (Required)" required>
-                    <input type="email" name="user_email" id="email" placeholder=" Email (Required)" required>
-                    <input type="text" name="user_subject" id="subject" placeholder="Subject">
-                    <textarea name="user_description" id="description" placeholder="Describe your project in detail..." max-length="4000"></textarea>
-                    <div>
-                        <input type="submit" id="button-submit" value="Send">
-                        <div class="error" id="error"></div>
+            <div class="container">
+                <div class="quote__block">
+                    <h2 class="quote header">Get a Quote</h2>
+                    <p class="quote description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+                    </p>
+                    <div class="quote__wrapper">
+                        <form id="form" target="_blank" novalidate>
+                            <input type="text" name="user_name" id="name" placeholder=" Name (Required)" required>
+                            <input type="email" name="user_email" id="email" placeholder=" Email (Required)" required>
+                            <input type="text" name="user_subject" id="subject" placeholder="Subject">
+                            <textarea name="user_description" id="description" placeholder="Describe your project in detail..." max-length="4000"></textarea>
+                            <div>
+                                <input type="submit" id="button-submit" value="Send">
+                                <div class="error" id="error"></div>
+                            </div>
+                        </form>
+                        <div class="quote__contacts">
+                            <h3 class="header contacts">Contact Information</h3>
+                            <p class="description contacts">Quisque hendrerit purus dapibus, ornare nibh vitae, viver- ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
+                            <ul>
+                                <li class="location">Elm St. 14/05 Lost City</li>
+                                <li class="phone">
+                                    <a href="tel:035283318635">03528 331 86 35</a>
+                                </li>
+                                <li class="email">
+                                    <a href="mailto:info@singolo.com">info@singolo.com</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </form>
-                <div class="quote__contacts">
-                    <h3 class="header contacts">Contact Information</h3>
-                    <p class="description contacts">Quisque hendrerit purus dapibus, ornare nibh vitae, viver-<br>ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
-                    <ul>
-                        <li class="location">Elm St. 14/05 Lost City</li>
-                        <li class="phone">
-                            <a href="tel:035283318635">03528 331 86 35</a>
-                        </li>
-                        <li class="email">
-                            <a href="mailto:info@singolo.com">info@singolo.com</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <div class="copyright">© Copyright 2013</div>
-        <div class="media footer">
-            <div class="media-site">
-                <div class="facebook"></div>
-            </div>
-            <div class="media-site">
-                <div class="google"></div>
-            </div>
-            <div class="media-site">
-                <div class="twitter"></div>
-            </div>
-            <div class="media-site">
-                <div class="linkedin"></div>
+        <div class="container">
+            <div class="footer__block">
+                <div class="copyright">© Copyright 2013</div>
+                <div class="media footer">
+                    <div class="media-site">
+                        <div class="facebook"></div>
+                    </div>
+                    <div class="media-site">
+                        <div class="google"></div>
+                    </div>
+                    <div class="media-site">
+                        <div class="twitter"></div>
+                    </div>
+                    <div class="media-site">
+                        <div class="linkedin"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
     <script src="script.js"></script>
 </body>
 
-</html
+</html>
