@@ -1225,9 +1225,8 @@ footer .media {
     padding: 30px;
   }
   section.services .services__block .services__items {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   section.services .services__block .services__items .services__item {
     margin: 16px 0 16px 0;

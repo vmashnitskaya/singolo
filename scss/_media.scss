@@ -269,7 +269,7 @@
         .services__block {
             padding: 30px;
             .services__items {
-                justify-content: center;
+                justify-content: space-around;
                 .services__item {
                     margin: 16px 0 16px 0;
                     &:nth-child(2n) {

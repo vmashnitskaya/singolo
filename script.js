@@ -136,7 +136,7 @@
 
      let threshold = 150;
      let restraint = 100;
-     let allowedTime = 300;
+     let allowedTime = 600;
 
      surface.addEventListener('mousedown', function(e) {
          startX = e.pageX;
