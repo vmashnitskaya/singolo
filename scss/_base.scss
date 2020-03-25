@@ -276,7 +276,7 @@
     }
     
     .services .services__block {
-        padding: 66px 40px 66px 40px;
+        padding: 66px 40px 66px 39px;
     }
     
     .header {
@@ -405,7 +405,7 @@
     
     .portfolio .portfolio__block .portfolio__images {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: flex-start;
         flex-wrap: wrap;
         width: 962px;
@@ -751,7 +751,7 @@
         height: 300px;
         margin-left: auto;
         margin-right: auto;
-        padding: 20px;
+        padding: 10px;
         border-top: 30px solid #F06C64;
         border-radius: 5px;
         text-align: center;
@@ -763,13 +763,16 @@
         position: relative;
         z-index: 12;
     }
+
+    .modal__content-header{
+        line-height: 30px;
+    }
     
     .modal__content-description {
         max-height: 170px;
         height: 170px;
         margin: 10 20px;
         overflow-y: auto;
-        overflow-x: hidden;
         text-align: start;
     }
     

@@ -313,7 +313,7 @@ section.services {
 }
 
 .services .services__block {
-  padding: 66px 40px 66px 40px;
+  padding: 66px 40px 66px 39px;
 }
 
 .header {
@@ -466,9 +466,9 @@ section.portfolio {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -893,7 +893,7 @@ footer .media {
   height: 300px;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
+  padding: 10px;
   border-top: 30px solid #F06C64;
   border-radius: 5px;
   text-align: center;
@@ -906,12 +906,15 @@ footer .media {
   z-index: 12;
 }
 
+.modal__content-header {
+  line-height: 30px;
+}
+
 .modal__content-description {
   max-height: 170px;
   height: 170px;
   margin: 10 20px;
   overflow-y: auto;
-  overflow-x: hidden;
   text-align: start;
 }
 
@@ -930,10 +933,10 @@ footer .media {
   background-color: #E1B255;
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1019px) {
   .container {
     width: 100%;
-    max-width: 1020px;
+    max-width: 1019px;
   }
   section.slider {
     height: 55vw;
@@ -989,9 +992,8 @@ footer .media {
     padding: 40px 40px 64px 40px;
   }
   section.services .services__block .services__items {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   section.services .services__block .services__items .services__item {
     margin-right: 54px;
@@ -1010,6 +1012,9 @@ footer .media {
     width: 100%;
   }
   section.portfolio .portfolio__block .portfolio__images {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 100%;
     min-width: 700px;
     height: 814px;
@@ -1092,8 +1097,6 @@ footer .media {
             box-shadow: 40px 0 40px rgba(0, 0, 0, 0.4);
   }
   .navbar__mobile h1 {
-    position: -webkit-sticky;
-    position: sticky;
     top: 14px;
     line-height: 40px;
     font-size: 20px;
@@ -1101,7 +1104,7 @@ footer .media {
   .navbar__mobile nav {
     position: -webkit-sticky;
     position: sticky;
-    top: 230px;
+    top: 100px;
     margin-top: 184px;
   }
   .navbar__mobile nav ul {
@@ -1194,10 +1197,6 @@ footer .media {
   section.services .services__block {
     padding: 30px;
   }
-  section.services .services__block .services__items {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
   section.services .services__block .services__items .services__item {
     margin: 16px 0 16px 0;
   }
@@ -1271,8 +1270,8 @@ footer .media {
     margin-top: 12px;
   }
   section.quote {
-    height: 105%;
-    max-height: 939px;
+    height: 110%;
+    max-height: 970px;
   }
   section.quote .quote__block {
     padding: 50px 30px;
@@ -1289,6 +1288,7 @@ footer .media {
   }
   section.quote .quote__block .quote__wrapper form input[type="submit"] {
     width: 100%;
+    height: 50px;
   }
   section.quote .quote__block .quote__wrapper form div {
     -webkit-box-orient: vertical;
@@ -1336,7 +1336,7 @@ footer .media {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 374px) {
   .container {
     width: 100%;
     max-width: 350px;
@@ -1393,8 +1393,11 @@ footer .media {
     max-height: 260px;
   }
   section.quote {
-    height: 105%;
-    max-height: 996px;
+    height: 110%;
+    max-height: 1000px;
+  }
+  section.quote .quote__block .quote__wrapper form div .error {
+    margin-top: -4px;
   }
   section.quote .quote__block .quote__wrapper .quote__contacts {
     margin-top: 28px;
