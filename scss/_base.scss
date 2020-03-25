@@ -1,36 +1,4 @@
-    @font-face {
-        font-family: 'Lato';
-        src: url('assets/fonts/Lato-Light.eot');
-        src: url('assets/fonts/Lato-Light.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Lato-Light.woff') format('woff'), url('assets/fonts/Lato-Light.ttf') format('truetype');
-        font-weight: 300;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: 'Lato';
-        src: url('assets/fonts/Lato-Regular.eot');
-        src: url('assets/fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Lato-Regular.woff') format('woff'), url('assets/fonts/Lato-Regular.ttf') format('truetype');
-        font-weight: 400;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: 'Lato';
-        src: url('assets/fonts/Lato-Bold.eot');
-        src: url('assets/fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Lato-Bold.woff') format('woff'), url('assets/fonts/Lato-Bold.ttf') format('truetype');
-        font-weight: 700;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: 'Lato';
-        src: url('assets/fonts/Lato-Black.eot');
-        src: url('assets/fonts/Lato-Black.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Lato-Black.woff') format('woff'), url('assets/fonts/Lato-Black.ttf') format('truetype');
-        font-weight: 900;
-        font-style: normal;
-    }
-    
-    * {
+ * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -180,11 +148,11 @@
     }
     
     .slider .slider__block button.left-button.blue {
-        background: url(assets/icons/slider/left_blue.svg) no-repeat;
+        filter: invert(50%) sepia(14%) saturate(4912%) hue-rotate(202deg) brightness(89%) contrast(86%);
     }
     
     .slider .slider__block button.right-button.blue {
-        background: url(assets/icons/slider/right_blue.svg) no-repeat;
+        filter: invert(50%) sepia(14%) saturate(4912%) hue-rotate(202deg) brightness(89%) contrast(86%);
     }
     
     .slider .slider__block .slider__wrapper .slides {
