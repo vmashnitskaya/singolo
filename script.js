@@ -110,16 +110,16 @@
 
  leftButton.addEventListener('click', function() {
      if (isEnabled) {
-         previousSlide(currentSlide);
-         hideDisabledScreen();
+        hideDisabledScreen();
+         previousSlide(currentSlide);   
      }
 
  });
 
  rightButton.addEventListener('click', function() {
      if (isEnabled) {
-         nextSlide(currentSlide);
-         hideDisabledScreen();
+        hideDisabledScreen();
+        nextSlide(currentSlide);
      }
  });
 
@@ -154,13 +154,13 @@
              if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
                  if (distX > 0) {
                      if (isEnabled) {
-
-                         previousSlide(currentSlide);
+                        hideDisabledScreen();
+                        previousSlide(currentSlide);
                      }
                  } else
                  if (isEnabled) {
-
-                     nextSlide(currentSlide);
+                    hideDisabledScreen();
+                    nextSlide(currentSlide);
                  }
              }
          }
@@ -171,9 +171,12 @@
      surface.addEventListener('touchstart', function(e) {
          if (e.target.classList.contains('left-button') || e.target.classList.contains('right-button')) {
              if (e.target.classList.contains('left-button')) {
-                 previousSlide(currentSlide);
+                hideDisabledScreen();
+                previousSlide(currentSlide);
              } else if (e.target.classList.contains('right-button')) {
-                 nextSlide(currentSlide);
+                hideDisabledScreen();
+                nextSlide(currentSlide);
+                
              }
          }
 
@@ -185,7 +188,7 @@
      })
 
      surface.addEventListener('touchmove', function(e) {
-         e.preventDefault();
+        e.preventDefault();
      })
 
      surface.addEventListener('touchend', function(e) {
@@ -200,12 +203,12 @@
              if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
                  if (distX > 0) {
                      if (isEnabled) {
-                         hideDisabledScreen();
+                        hideDisabledScreen();
                          previousSlide(currentSlide);
                      }
                  } else
                  if (isEnabled) {
-                     hideDisabledScreen();
+                    hideDisabledScreen();
                      nextSlide(currentSlide);
                  }
              }

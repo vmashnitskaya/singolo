@@ -282,7 +282,7 @@ section.slider.colored {
   position: absolute;
   z-index: 3;
   background-color: #2d303a;
-  width: 189px;
+  width: 190px;
   height: 335px;
   left: 126px;
   top: 64px;
@@ -294,8 +294,8 @@ section.slider.colored {
   position: absolute;
   z-index: 3;
   background-color: #2d303a;
-  width: 333px;
-  height: 189px;
+  width: 334px;
+  height: 190px;
   right: 200px;
   top: 134px;
   border-radius: 2px;
@@ -956,14 +956,14 @@ footer .media {
   }
   section.slider .slider__block .slider__wrapper .slides .phone1 {
     width: 141px;
-    height: 250px;
-    left: 112px;
+    height: 247px;
+    left: 113px;
     top: 46px;
   }
   section.slider .slider__block .slider__wrapper .slides .phone2 {
     height: 141px;
-    width: 250px;
-    right: 160px;
+    width: 245px;
+    right: 164px;
     top: 110px;
   }
   section.slider .slider__block .slider__wrapper .slides .slide .phone-one {
@@ -1188,14 +1188,14 @@ footer .media {
   section.slider .slider__block .slider__wrapper .slides .phone1 {
     width: 68px;
     height: 120px;
-    left: 56px;
-    top: 22px;
+    left: 57px;
+    top: 23px;
   }
   section.slider .slider__block .slider__wrapper .slides .phone2 {
-    height: 68px;
+    height: 69px;
     width: 120px;
     right: 79px;
-    top: 54px;
+    top: 53px;
   }
   section.services {
     height: 200%;
