@@ -14,6 +14,7 @@ function openCloseMobileMenu() {
     mobileNavbar.classList.remove('hidden');
     burger.classList.add('active');
     body.classList.add('no-scroll');
+    addClassToOneElement(navigationLinks[0], 'active', navigationLinks);
   } else {
     mobileNavbar.classList.add('hidden');
     burger.classList.remove('active');
@@ -29,8 +30,6 @@ mobileNavigation.addEventListener('click', function(event) {
     .scrollIntoView({ behavior: 'smooth' });
 
   openCloseMobileMenu();
-
-  addClassToOneElement(navigationLinks[0], 'active', navigationLinks);
 });
 
 //Navigation
