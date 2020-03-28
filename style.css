@@ -1227,7 +1227,7 @@ footer .media {
     width: 99.2%;
     height: 100%;
     min-width: 317px;
-    max-height: 550px;
+    max-height: 548px;
     margin-top: 25px;
   }
   section.portfolio .portfolio__block .portfolio__images .portfolio__image {
@@ -1235,12 +1235,6 @@ footer .media {
     height: 127px;
     margin-right: 10px;
     margin-bottom: 10px;
-  }
-  section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(7), section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(8) {
-    margin-bottom: 0;
-  }
-  section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(9), section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(10), section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(11), section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(12) {
-    display: none;
   }
   section.about {
     height: 280%;
@@ -1367,6 +1361,9 @@ footer .media {
   section.portfolio {
     min-height: 757px;
   }
+  section.portfolio .portfolio__block {
+    width: 99%;
+  }
   section.portfolio .portfolio__block .portfolio__tags .portfolio__tag {
     padding: 0 4px;
     margin-right: 4px;
@@ -1384,6 +1381,9 @@ footer .media {
     width: 123px;
     height: 104px;
   }
+  section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(9), section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(10), section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(11), section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(12) {
+    display: none;
+  }
   section.about .about__block .about__persons {
     min-width: 260px;
   }
@@ -1398,7 +1398,7 @@ footer .media {
     max-height: 1000px;
   }
   section.quote .quote__block .quote__wrapper form div .error {
-    margin-top: -4px;
+    margin-top: 6px;
   }
   section.quote .quote__block .quote__wrapper .quote__contacts {
     margin-top: 28px;
