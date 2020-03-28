@@ -1,437 +1,432 @@
- //Mobile navigation menu
- let burger = document.querySelector('#header__burger');
- let mobileNavbar = document.querySelector('#navbar__mobile');
- let mobileNavigation = document.querySelector('.mobile__navigation');
+//Mobile navigation menu
+let body = document.querySelector('body');
+let burger = document.querySelector('#header__burger');
+let mobileNavbar = document.querySelector('#navbar__mobile');
+let mobileNavigation = document.querySelector('.mobile__navigation');
+let navigationLinks = document.querySelectorAll('.navigation');
 
- burger.addEventListener('click', function() {
-     openCloseMobileMenu();
- })
+burger.addEventListener('click', function() {
+  openCloseMobileMenu();
+});
 
- function openCloseMobileMenu() {
-     if (mobileNavbar.classList.contains('hidden')) {
-         mobileNavbar.classList.remove('hidden');
-         burger.classList.add('active');
-     } else {
-         mobileNavbar.classList.add('hidden');
-         burger.classList.remove('active');
-     }
- }
+function openCloseMobileMenu() {
+  if (mobileNavbar.classList.contains('hidden')) {
+    mobileNavbar.classList.remove('hidden');
+    burger.classList.add('active');
+    body.classList.add('no-scroll');
+  } else {
+    mobileNavbar.classList.add('hidden');
+    burger.classList.remove('active');
+    body.classList = '';
+  }
+}
 
- mobileNavigation.addEventListener('click', function(event) {
+mobileNavigation.addEventListener('click', function(event) {
+  addClassToOneElement(event.target, 'active', navigationLinks);
 
-     addClassToOneElement(event.target, 'active', navigationLinks);
+  document
+    .getElementById(event.target.getAttribute('scroll-to'))
+    .scrollIntoView({ behavior: 'smooth' });
 
-     document
-         .getElementById(event.target.getAttribute('scroll-to'))
-         .scrollIntoView({ behavior: 'smooth' });
- });
+  openCloseMobileMenu();
 
- //Navigation
- let navigationContainer = document.querySelector('.header__navigation');
- let navigationLinks = document.querySelectorAll('.navigation');
+  addClassToOneElement(navigationLinks[0], 'active', navigationLinks);
+});
 
- function addClassToOneElement(elementNode, classStyle, elementsContainer) {
-     elementsContainer.forEach(element => element.classList.remove(classStyle));
-     elementNode.classList.add(classStyle);
- }
+//Navigation
+let navigationContainer = document.querySelector('.header__navigation');
 
- navigationContainer.addEventListener('click', function(event) {
+function addClassToOneElement(elementNode, classStyle, elementsContainer) {
+  elementsContainer.forEach(element => element.classList.remove(classStyle));
+  elementNode.classList.add(classStyle);
+}
 
-     addClassToOneElement(event.target, 'active', navigationLinks);
+function removeClassFromElements(classStyle, elementsContainer) {
+  elementsContainer.forEach(element => element.classList.remove(classStyle));
+}
 
-     document
-         .getElementById(event.target.getAttribute('scroll-to'))
-         .scrollIntoView({ behavior: 'smooth' });
- });
+navigationContainer.addEventListener('click', function(event) {
+  addClassToOneElement(event.target, 'active', navigationLinks);
 
- //Slider
- let sectionSlider = document.querySelector('#slider');
- let slides = document.querySelectorAll('.slide');
- let leftButton = document.querySelector('.left-button');
- let rightButton = document.querySelector('.right-button');
- let currentSlide = 0;
- let isEnabled = true;
+  document
+    .getElementById(event.target.getAttribute('scroll-to'))
+    .scrollIntoView({ behavior: 'smooth' });
+});
 
- function changeCurrentSlide(n) {
-     currentSlide = (n + slides.length) % slides.length
- }
+//Slider
+let sectionSlider = document.querySelector('#slider');
+let slides = document.querySelectorAll('.slide');
+let leftButton = document.querySelector('.left-button');
+let rightButton = document.querySelector('.right-button');
+let currentSlide = 0;
+let isEnabled = true;
 
- function hideSlide(direction) {
-     isEnabled = false;
-     slides[currentSlide].classList.add(direction);
-     slides[currentSlide].addEventListener('animationend', function() {
-         this.classList.remove('active', direction);
-     })
- }
+function changeCurrentSlide(n) {
+  currentSlide = (n + slides.length) % slides.length;
+}
 
- function showSlide(direction) {
-     slides[currentSlide].classList.add('next', direction)
-     slides[currentSlide].addEventListener('animationend', function() {
-         this.classList.remove('next', direction);
-         this.classList.add('active');
-         isEnabled = true
-     })
- }
+function hideSlide(direction) {
+  isEnabled = false;
+  slides[currentSlide].classList.add(direction);
+  slides[currentSlide].addEventListener('animationend', function() {
+    this.classList.remove('active', direction);
+  });
+}
 
- function previousSlide(n) {
-     hideSlide('to-right');
-     changeCurrentSlide(n - 1);
-     showSlide('from-left');
-     changeSectionDesign();
- }
+function showSlide(direction) {
+  slides[currentSlide].classList.add('next', direction);
+  slides[currentSlide].addEventListener('animationend', function() {
+    this.classList.remove('next', direction);
+    this.classList.add('active');
+    isEnabled = true;
+  });
+}
 
- function nextSlide(n) {
-     hideSlide('to-left');
-     changeCurrentSlide(n + 1);
-     showSlide('from-right');
-     changeSectionDesign();
- }
+function previousSlide(n) {
+  hideSlide('to-right');
+  changeCurrentSlide(n - 1);
+  showSlide('from-left');
+  changeSectionDesign();
+}
 
- function changeSectionDesign() {
-     if (sectionSlider.classList.contains('colored')) {
-         sectionSlider.classList.remove('colored');
-         leftButton.classList.remove('blue');
-         rightButton.classList.remove('blue');
-     } else {
-         sectionSlider.classList.add('colored');
-         leftButton.classList.add('blue');
-         rightButton.classList.add('blue');
-     }
- }
+function nextSlide(n) {
+  hideSlide('to-left');
+  changeCurrentSlide(n + 1);
+  showSlide('from-right');
+  changeSectionDesign();
+}
 
- function hideDisabledScreen() {
-     if (!verticalPhoneDisabled.classList.contains('disabled')) {
-         verticalPhoneDisabled.classList.add('disabled');
-     }
-     if (!horizontalPhoneDisabled.classList.contains('disabled')) {
-         horizontalPhoneDisabled.classList.add('disabled');
-     }
- }
+function changeSectionDesign() {
+  if (sectionSlider.classList.contains('colored')) {
+    sectionSlider.classList.remove('colored');
+    leftButton.classList.remove('blue');
+    rightButton.classList.remove('blue');
+  } else {
+    sectionSlider.classList.add('colored');
+    leftButton.classList.add('blue');
+    rightButton.classList.add('blue');
+  }
+}
 
- leftButton.addEventListener('click', function() {
-     if (isEnabled) {
+function hideDisabledScreen() {
+  if (!verticalPhoneDisabled.classList.contains('disabled')) {
+    verticalPhoneDisabled.classList.add('disabled');
+  }
+  if (!horizontalPhoneDisabled.classList.contains('disabled')) {
+    horizontalPhoneDisabled.classList.add('disabled');
+  }
+}
+
+leftButton.addEventListener('click', function() {
+  if (isEnabled) {
+    hideDisabledScreen();
+    previousSlide(currentSlide);
+  }
+});
+
+rightButton.addEventListener('click', function() {
+  if (isEnabled) {
+    hideDisabledScreen();
+    nextSlide(currentSlide);
+  }
+});
+
+const swipeDetect = el => {
+  let surface = el;
+
+  let startX = 0;
+  let startY = 0;
+  let distX = 0;
+  let distY = 0;
+
+  let startTime = 0;
+  let elapsedTime = 0;
+
+  let threshold = 50;
+  let restraint = 50;
+  let allowedTime = 300;
+
+  surface.addEventListener('mousedown', function(e) {
+    startX = e.pageX;
+    startY = e.pageY;
+    startTime = new Date().getTime();
+    e.preventDefault();
+  });
+  surface.addEventListener('mouseup', function(e) {
+    distX = e.pageX - startX;
+    distY = e.pageY - startY;
+
+    elapsedTime = new Date().getTime() - startTime;
+
+    if (elapsedTime <= allowedTime) {
+      if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+        if (distX > 0) {
+          if (isEnabled) {
+            hideDisabledScreen();
+            previousSlide(currentSlide);
+          }
+        } else if (isEnabled) {
+          hideDisabledScreen();
+          nextSlide(currentSlide);
+        }
+      }
+    }
+    e.preventDefault();
+  });
+
+  surface.addEventListener('touchstart', function(e) {
+    if (
+      e.target.classList.contains('left-button') ||
+      e.target.classList.contains('right-button')
+    ) {
+      if (e.target.classList.contains('left-button')) {
         hideDisabledScreen();
-         previousSlide(currentSlide);   
-     }
-
- });
-
- rightButton.addEventListener('click', function() {
-     if (isEnabled) {
+        previousSlide(currentSlide);
+      } else if (e.target.classList.contains('right-button')) {
         hideDisabledScreen();
         nextSlide(currentSlide);
-     }
- });
+      }
+    }
 
- const swipeDetect = (el) => {
-     let surface = el;
+    let touchObject = e.changedTouches[0];
+    startX = touchObject.pageX;
+    startY = touchObject.pageY;
+    startTime = new Date().getTime();
+    e.preventDefault();
+  });
 
-     let startX = 0;
-     let startY = 0;
-     let distX = 0;
-     let distY = 0;
+  surface.addEventListener('touchmove', function(e) {
+    e.preventDefault();
+  });
 
-     let startTime = 0;
-     let elapsedTime = 0;
+  surface.addEventListener('touchend', function(e) {
+    let touchObject = e.changedTouches[0];
+    distX = touchObject.pageX - startX;
+    distY = touchObject.pageY - startY;
 
-     let threshold = 50;
-     let restraint = 50;
-     let allowedTime = 300;
+    elapsedTime = new Date().getTime() - startTime;
 
-     surface.addEventListener('mousedown', function(e) {
-         startX = e.pageX;
-         startY = e.pageY;
-         startTime = new Date().getTime();
-         e.preventDefault();
-     })
-     surface.addEventListener('mouseup', function(e) {
-         distX = e.pageX - startX;
-         distY = e.pageY - startY;
+    if (elapsedTime <= allowedTime) {
+      if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+        if (distX > 0) {
+          if (isEnabled) {
+            hideDisabledScreen();
+            previousSlide(currentSlide);
+          }
+        } else if (isEnabled) {
+          hideDisabledScreen();
+          nextSlide(currentSlide);
+        }
+      }
+    }
+    e.preventDefault();
+  });
+};
+let swiper = document.querySelector('.slider__block');
+swipeDetect(swiper);
 
-         elapsedTime = new Date().getTime() - startTime;
+//Disable phones
+let verticalPhoneDisabled = document.querySelector('.phone1');
+let horizontalPhoneDisabled = document.querySelector('.phone2');
+let verticalPhone = document.querySelector('.phone-one');
+let horizontalPhone = document.querySelector('.phone-two');
 
-         if (elapsedTime <= allowedTime) {
-             if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
-                 if (distX > 0) {
-                     if (isEnabled) {
-                        hideDisabledScreen();
-                        previousSlide(currentSlide);
-                     }
-                 } else
-                 if (isEnabled) {
-                    hideDisabledScreen();
-                    nextSlide(currentSlide);
-                 }
-             }
-         }
-         e.preventDefault();
-     })
+verticalPhone.addEventListener('click', function() {
+  disablePhone(verticalPhoneDisabled);
+});
+verticalPhoneDisabled.addEventListener('click', function() {
+  disablePhone(verticalPhoneDisabled);
+});
+horizontalPhone.addEventListener('click', function() {
+  disablePhone(horizontalPhoneDisabled);
+});
+horizontalPhoneDisabled.addEventListener('click', function() {
+  disablePhone(horizontalPhoneDisabled);
+});
 
+verticalPhone.addEventListener('touchstart', function() {
+  disablePhone(verticalPhoneDisabled);
+});
+horizontalPhone.addEventListener('touchstart', function() {
+  disablePhone(horizontalPhoneDisabled);
+});
+horizontalPhoneDisabled.addEventListener('touchstart', function() {
+  disablePhone(horizontalPhoneDisabled);
+});
+verticalPhoneDisabled.addEventListener('touchstart', function() {
+  disablePhone(verticalPhoneDisabled);
+});
 
-     surface.addEventListener('touchstart', function(e) {
-         if (e.target.classList.contains('left-button') || e.target.classList.contains('right-button')) {
-             if (e.target.classList.contains('left-button')) {
-                hideDisabledScreen();
-                previousSlide(currentSlide);
-             } else if (e.target.classList.contains('right-button')) {
-                hideDisabledScreen();
-                nextSlide(currentSlide);
-                
-             }
-         }
+function disablePhone(phoneType) {
+  if (screen.width >= 1020) {
+    if (phoneType.classList.contains('disabled')) {
+      phoneType.classList.remove('disabled');
+    } else {
+      phoneType.classList.add('disabled');
+    }
+  }
+}
 
-         let touchObject = e.changedTouches[0];
-         startX = touchObject.pageX;
-         startY = touchObject.pageY;
-         startTime = new Date().getTime();
-         e.preventDefault();
-     })
+//Select tag and mix images
+let tags = document.querySelectorAll('.portfolio__tag');
+let tagContainer = document.querySelector('.portfolio__tags');
+let portfolioImages = document.querySelectorAll('.portfolio__image');
+let imageContainer = document.querySelector('.portfolio__images');
 
-     surface.addEventListener('touchmove', function(e) {
-        e.preventDefault();
-     })
+function mixImages(imagesArray) {
+  let mixedArray = shuffleArray(imagesArray);
+  mixedArray.forEach(element => imageContainer.append(element));
+}
 
-     surface.addEventListener('touchend', function(e) {
-         let touchObject = e.changedTouches[0];
-         distX = touchObject.pageX - startX;
-         distY = touchObject.pageY - startY;
+function shuffleArray(arr) {
+  let j, temp;
+  for (let i = arr.length - 1; i > 0; i--) {
+    j = Math.floor(Math.random() * (i + 1));
+    temp = arr[j];
+    arr[j] = arr[i];
+    arr[i] = temp;
+  }
+  return arr;
+}
 
-         elapsedTime = new Date().getTime() - startTime;
+tagContainer.addEventListener('click', function(event) {
+  if (event.target.classList.contains('portfolio__tag')) {
+    portfolioImages.forEach(element => element.classList.remove('bordered'));
+    addClassToOneElement(event.target, 'tag-active', tags);
+    mixImages([...portfolioImages]);
+  }
+});
 
+//Border image
+imageContainer.addEventListener('click', function(event) {
+  addClassToOneElement(event.target.parentNode, 'bordered', portfolioImages);
+});
 
-         if (elapsedTime <= allowedTime) {
-             if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
-                 if (distX > 0) {
-                     if (isEnabled) {
-                        hideDisabledScreen();
-                         previousSlide(currentSlide);
-                     }
-                 } else
-                 if (isEnabled) {
-                    hideDisabledScreen();
-                     nextSlide(currentSlide);
-                 }
-             }
-         }
-         e.preventDefault();
-     })
- }
- let swiper = document.querySelector('.slider__block');
- swipeDetect(swiper);
+//Form validation
+let name = document.querySelector('#name');
+let form = document.querySelector('#form');
+let email = document.querySelector('#email');
+let button = document.querySelector('#button-submit');
+let emailRegEx = /^[0-9a-z-\.]+\@[0-9a-z-]{2,}\.[a-z]{2,}$/i;
 
- //Disable phones
- let verticalPhoneDisabled = document.querySelector('.phone1');
- let horizontalPhoneDisabled = document.querySelector('.phone2');
- let verticalPhone = document.querySelector('.phone-one');
- let horizontalPhone = document.querySelector('.phone-two');
+function validationRequired(input) {
+  error.innerHTML = 'Please fill mandatory fields';
+  input.classList.add('required');
+  event.preventDefault();
+}
 
+function validateEmptyInput(input) {
+  if (input.value == '') {
+    validationRequired(input);
+  }
+}
 
- verticalPhone.addEventListener('click', function() {
-     disablePhone(verticalPhoneDisabled);
- });
- verticalPhoneDisabled.addEventListener('click', function() {
-     disablePhone(verticalPhoneDisabled);
- });
- horizontalPhone.addEventListener('click', function() {
-     disablePhone(horizontalPhoneDisabled);
- });
- horizontalPhoneDisabled.addEventListener('click', function() {
-     disablePhone(horizontalPhoneDisabled);
- });
+function validateEmailValue(input) {
+  if (!input.value.match(emailRegEx) && input.value != '') {
+    error.innerHTML = 'The e-mail adress is incorrect';
+    event.preventDefault();
+  }
+}
 
- verticalPhone.addEventListener('touchstart', function() {
-     disablePhone(verticalPhoneDisabled);
+function removeHighlighting(input) {
+  if (input.classList.contains('required')) {
+    input.classList.remove('required');
+  }
+}
 
- });
- horizontalPhone.addEventListener('touchstart', function() {
-     disablePhone(horizontalPhoneDisabled);
- });
- horizontalPhoneDisabled.addEventListener('touchstart', function() {
-     disablePhone(horizontalPhoneDisabled);
- });
- verticalPhoneDisabled.addEventListener('touchstart', function() {
-     disablePhone(verticalPhoneDisabled);
- });
+function validateBothFields(...inputs) {
+  inputs.forEach(element => {
+    if (element.value == '') validationRequired(element);
+  });
+}
 
+form.addEventListener('submit', function() {
+  event.preventDefault();
+  validateBothFields(name, email);
+  validateEmptyInput(name);
+  validateEmptyInput(email);
+  validateEmailValue(email);
+  if (name.value != '' && email.value != '' && email.value.match(emailRegEx)) {
+    error.innerHTML = '';
+    appendOverlayModal(quote);
+  }
+});
 
- function disablePhone(phoneType) {
-     if (screen.width == 375 || screen.width == 768 || screen.width >= 1020) {
-         if (phoneType.classList.contains('disabled')) {
-             phoneType.classList.remove('disabled');
-         } else {
-             phoneType.classList.add('disabled');
-         }
-     }
- }
+email.addEventListener('input', function() {
+  removeHighlighting(email);
+});
 
+name.addEventListener('input', function() {
+  removeHighlighting(name);
+});
 
+//Modal
+let quote = document.querySelector('#quote');
+let subject = document.querySelector('#subject');
+let description = document.querySelector('#description');
+let overlay = createDomeNode('div', 'overlay_modal');
+let modalCloseBtn;
 
- //Select tag and mix images
- let tags = document.querySelectorAll('.portfolio__tag');
- let tagContainer = document.querySelector('.portfolio__tags');
- let portfolioImages = document.querySelectorAll('.portfolio__image');
- let imageContainer = document.querySelector('.portfolio__images');
+function createModalContent() {
+  let modal = createDomeNode('div', 'modal');
+  let content = createDomeNode('div', 'modal__content');
+  let contentHeader = createDomeNode('h3', 'modal__content-header');
+  contentHeader.textContent = 'The message is sent';
 
- function mixImages(imagesArray) {
-     let mixedArray = shuffleArray(imagesArray);
-     mixedArray.forEach(element => imageContainer.append(element));
- }
+  let contentDescription = createDomeNode('p', 'modal__content-description');
+  contentDescription.innerHTML = generateTextDescription(subject, description);
 
- function shuffleArray(arr) {
-     let j, temp;
-     for (let i = arr.length - 1; i > 0; i--) {
-         j = Math.floor(Math.random() * (i + 1));
-         temp = arr[j];
-         arr[j] = arr[i];
-         arr[i] = temp;
-     }
-     return arr;
- }
+  modalCloseBtn = createButton('OK', 'modal__close', 'modal__close');
 
- tagContainer.addEventListener('click', function(event) {
-     if (event.target.classList.contains('portfolio__tag')) {
-         portfolioImages.forEach(element => element.classList.remove('bordered'));
-         addClassToOneElement(event.target, 'tag-active', tags);
-         mixImages([...portfolioImages]);
-     }
- })
+  const handleClose = () => {
+    overlay.remove();
+    form.reset();
+    modalCloseBtn.removeEventListener('click', handleClose);
+  };
+  modalCloseBtn.addEventListener('click', handleClose);
 
- //Border image
- imageContainer.addEventListener('click', function(event) {
-     addClassToOneElement(event.target.parentNode, 'bordered', portfolioImages);
- })
+  modal.append(content);
+  modal.append(contentHeader);
+  modal.append(contentDescription);
+  modal.append(modalCloseBtn);
+  return modal;
+}
 
- //Form validation
- let name = document.querySelector('#name');
- let form = document.querySelector('#form');
- let email = document.querySelector('#email');
- let button = document.querySelector('#button-submit');
- let emailRegEx = /^[0-9a-z-\.]+\@[0-9a-z-]{2,}\.[a-z]{2,}$/i;
+function generateTextDescription(fromInput1, fromInput2) {
+  let description = '';
+  description +=
+    retrieveValue(fromInput1, 'No subject', 'Subject: ') + '<br><br>';
+  description += retrieveValue(fromInput2, 'No description', 'Description: ');
+  return description;
+}
 
- function validationRequired(input) {
-     error.innerHTML = 'Пожалуйста, запоните обязательные поля'
-     input.classList.add('required')
-     event.preventDefault()
- }
+function retrieveValue(fromInput, defaultMessage, label) {
+  if (fromInput.value == '') {
+    return defaultMessage;
+  } else {
+    return `<strong><em>${label}</em></strong>` + fromInput.value;
+  }
+}
 
- function validateEmptyInput(input) {
-     if (input.value == '') {
-         validationRequired(input);
-     }
- }
+function createButton(value, id, ...classes) {
+  let button = createDomeNode('button', ...classes);
+  button.textContent = value;
+  button.id = id;
+  return button;
+}
 
- function validateEmailValue(input) {
-     if (!input.value.match(emailRegEx) && input.value != '') {
-         error.innerHTML = 'Неправильный формат электронной почты'
-         event.preventDefault();
-     }
- }
+function createModalBase() {
+  let modal = createModalContent();
+  overlay.append(modal);
+  return overlay;
+}
 
- function removeHighlighting(input) {
-     if (input.classList.contains('required')) {
-         input.classList.remove('required')
-     }
- }
+function appendOverlayModal(section) {
+  section.prepend(createModalBase());
+}
 
- function validateBothFields(...inputs) {
-     inputs.forEach(element => {
-         if (element.value == '')
-             validationRequired(element);
-     });
- }
-
- function validateInputLength(node, fieldLabel, max) {
-     if (node.value.length > max) {
-         error.innerHTML = `The length of ${fieldLabel} fields should be up to 255 symbols.`;
-         event.preventDefault();
-     }
- }
- form.addEventListener('submit', function() {
-     validateBothFields(name, email);
-     validateEmptyInput(name);
-     validateEmptyInput(email);
-     validateEmailValue(email);
-     if (name.value != '' && email.value != '' && email.value.match(emailRegEx)) {
-         event.preventDefault();
-         error.innerHTML = '';
-         appendOverlayModal(quote);
-     }
- });
-
- email.addEventListener('input', function() {
-     removeHighlighting(email);
- });
-
- name.addEventListener('input', function() {
-     removeHighlighting(name);
- });
-
- //Modal
- let quote = document.querySelector('#quote');
- let subject = document.querySelector('#subject');
- let description = document.querySelector('#description');
- let overlay = createDomeNode('div', 'overlay_modal');
- let modalCloseBtn;
-
- function createModalContent() {
-     let modal = createDomeNode('div', 'modal');
-     let content = createDomeNode('div', 'modal__content');
-     let contentHeader = createDomeNode('h3', 'modal__content-header');
-     contentHeader.textContent = 'Письмо отправлено';
-
-     let contentDescription = createDomeNode('p', 'modal__content-description');
-     contentDescription.innerHTML = generateTextDescription(subject, description);
-
-     modalCloseBtn = createButton('OK', 'modal__close', 'modal__close');
-
-     const handleClose = () => {
-         overlay.remove();
-         form.reset();
-         modalCloseBtn.removeEventListener('click', handleClose);
-     }
-     modalCloseBtn.addEventListener('click', handleClose);
-
-     modal.append(content);
-     modal.append(contentHeader);
-     modal.append(contentDescription);
-     modal.append(modalCloseBtn);
-     return modal;
- }
-
- function generateTextDescription(fromInput1, fromInput2) {
-     let description = '';
-     description += retrieveValue(fromInput1, 'Без темы', 'Тема: ') + '<br><br>';
-     description += retrieveValue(fromInput2, 'Без описания', 'Описание: ');
-     return description;
- }
-
- function retrieveValue(fromInput, defaultMessage, label) {
-     if (fromInput.value == '') {
-         return defaultMessage;
-     } else {
-         return `<strong><em>${label}</em></strong>` + fromInput.value;
-     }
- }
-
- function createButton(value, id, ...classes) {
-     let button = createDomeNode('button', ...classes);
-     button.textContent = value;
-     button.id = id;
-     return button;
- }
-
- function createModalBase() {
-     let modal = createModalContent();
-     overlay.append(modal);
-     return overlay;
- }
-
- function appendOverlayModal(section) {
-     section.prepend(createModalBase());
- }
-
- function createDomeNode(element, elementClass, baseElement = document) {
-     let node = baseElement.createElement(element);
-     node.classList.add(elementClass);
-     return node;
- }
+function createDomeNode(element, elementClass, baseElement = document) {
+  let node = baseElement.createElement(element);
+  node.classList.add(elementClass);
+  return node;
+}
