@@ -284,23 +284,13 @@
         width: 99.2%;
         height: 100%;
         min-width: 317px;
-        max-height: 550px;
+        max-height: 548px;
         margin-top: 25px;
         .portfolio__image {
           width: 151px;
           height: 127px;
           margin-right: 10px;
           margin-bottom: 10px;
-          &:nth-child(7),
-          &:nth-child(8) {
-            margin-bottom: 0;
-          }
-          &:nth-child(9),
-          &:nth-child(10),
-          &:nth-child(11),
-          &:nth-child(12) {
-            display: none;
-          }
         }
       }
     }
@@ -421,6 +411,7 @@
   section.portfolio {
     min-height: 757px;
     .portfolio__block {
+      width: 99%;
       .portfolio__tags {
         .portfolio__tag {
           padding: 0 4px;
@@ -436,6 +427,12 @@
         .portfolio__image {
           width: 123px;
           height: 104px;
+          &:nth-child(9),
+          &:nth-child(10),
+          &:nth-child(11),
+          &:nth-child(12) {
+            display: none;
+          }
         }
       }
     }
@@ -459,7 +456,7 @@
     .quote__block {
       .quote__wrapper {
         form div .error {
-          margin-top: -4px;
+          margin-top: 6px;
         }
         .quote__contacts {
           margin-top: 28px;
