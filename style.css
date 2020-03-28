@@ -10,6 +10,10 @@ body {
   position: relative;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1020px;
   width: 100%;
@@ -84,7 +88,7 @@ header .header__block nav ul li {
 }
 
 header .header__block nav ul li:after {
-  content: "";
+  content: '';
   display: inline-block;
   margin: 5px 11px 3px 14px;
   width: 2px;
@@ -113,8 +117,8 @@ section.slider {
 }
 
 section.slider.colored {
-  background-color: #648BF0;
-  border-color: #648BF0;
+  background-color: #648bf0;
+  border-color: #648bf0;
 }
 
 .slider .slider__block {
@@ -282,7 +286,7 @@ section.slider.colored {
   position: absolute;
   z-index: 3;
   background-color: #2d303a;
-  width: 189px;
+  width: 190px;
   height: 335px;
   left: 126px;
   top: 64px;
@@ -294,8 +298,8 @@ section.slider.colored {
   position: absolute;
   z-index: 3;
   background-color: #2d303a;
-  width: 333px;
-  height: 189px;
+  width: 334px;
+  height: 190px;
   right: 200px;
   top: 134px;
   border-radius: 2px;
@@ -319,7 +323,7 @@ section.services {
 .header {
   font-size: 30px;
   font-weight: 900;
-  line-height: 1em;
+  line-height: 30pxem;
   color: #666d89;
 }
 
@@ -328,7 +332,7 @@ section.services {
   font-size: 18px;
   font-weight: 300;
   line-height: 30px;
-  color: #767E9E;
+  color: #767e9e;
   text-align: justify;
   letter-spacing: -0.2px;
 }
@@ -421,7 +425,7 @@ section.portfolio {
 }
 
 .portfolio .portfolio__block {
-  padding: 66px 19px 64px 39px;
+  padding: 66px 19px 70px 39px;
 }
 
 .portfolio .portfolio__block .header {
@@ -430,10 +434,11 @@ section.portfolio {
 
 .portfolio .portfolio__block .description {
   margin-top: 20px;
+  padding-right: 20px;
 }
 
 .portfolio .portfolio__block .portfolio__tags {
-  margin-top: 9px;
+  margin-top: 15px;
 }
 
 .portfolio .portfolio__block .portfolio__tag {
@@ -475,7 +480,7 @@ section.portfolio {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 962px;
-  height: 621px;
+  height: 601px;
   margin-top: 18px;
   overflow: hidden;
 }
@@ -485,15 +490,6 @@ section.portfolio {
 }
 
 .portfolio .portfolio__block .portfolio__images .portfolio__image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 220px;
   height: 187px;
   margin-bottom: 20px;
@@ -501,12 +497,22 @@ section.portfolio {
   overflow: hidden;
 }
 
+.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(9),
+.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(10),
+.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(11),
+.portfolio
+.portfolio__block
+.portfolio__images
+.portfolio__image:nth-child(12) {
+  margin-bottom: 0;
+}
+
 .portfolio .portfolio__block .portfolio__images .portfolio__image:hover {
   cursor: pointer;
 }
 
 .portfolio .portfolio__block .portfolio__images .portfolio__image.bordered {
-  border: 5px solid #F06C64;
+  border: 5px solid #f06c64;
 }
 
 .portfolio .portfolio__block .portfolio__images .portfolio__image img {
@@ -709,21 +715,21 @@ section.quote {
   color: #f0d8d9;
 }
 
-.quote .quote__block .quote__wrapper input[type="submit"] {
+.quote .quote__block .quote__wrapper input[type='submit'] {
   -ms-grid-column-align: self-start;
       justify-self: self-start;
   width: 136px;
   height: 38px;
   padding: 8px 0;
   cursor: pointer;
-  background: #FBC65F;
-  color: #886A30;
+  background: #fbc65f;
+  color: #886a30;
   text-transform: uppercase;
   font-weight: 700;
 }
 
-.quote .quote__block .quote__wrapper input[type="submit"]:active {
-  background-color: #E1B255;
+.quote .quote__block .quote__wrapper input[type='submit']:active {
+  background-color: #e1b255;
 }
 
 .quote .quote__block .quote__wrapper form input::-webkit-input-placeholder,
@@ -894,10 +900,10 @@ footer .media {
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
-  border-top: 30px solid #F06C64;
+  border-top: 30px solid #f06c64;
   border-radius: 5px;
   text-align: center;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   opacity: 1;
 }
 
@@ -921,8 +927,8 @@ footer .media {
 .modal__close {
   width: 136px;
   height: 36px;
-  background-color: #FBC65F;
-  color: #886A30;
+  background-color: #fbc65f;
+  color: #886a30;
   border-radius: 5px;
   border: none;
   outline: none;
@@ -930,7 +936,7 @@ footer .media {
 }
 
 .modal__close:active {
-  background-color: #E1B255;
+  background-color: #e1b255;
 }
 
 @media screen and (max-width: 1019px) {
@@ -954,26 +960,14 @@ footer .media {
   section.slider .slider__block button.right-button {
     right: 30px;
   }
-  section.slider .slider__block .slider__wrapper .slides .phone1 {
-    width: 141px;
-    height: 250px;
-    left: 112px;
-    top: 46px;
-  }
-  section.slider .slider__block .slider__wrapper .slides .phone2 {
-    height: 141px;
-    width: 250px;
-    right: 160px;
-    top: 110px;
-  }
   section.slider .slider__block .slider__wrapper .slides .slide .phone-one {
-    width: 23vw;
-    height: 46vw;
+    width: 23.5vw;
+    height: 47.3vw;
     cursor: none;
   }
   section.slider .slider__block .slider__wrapper .slides .slide .phone-two {
-    width: 46vw;
-    height: 23vw;
+    width: 47.3vw;
+    height: 23.5vw;
     -webkit-transform: translateY(-10vw);
             transform: translateY(-10vw);
     cursor: none;
@@ -986,7 +980,8 @@ footer .media {
     margin-left: 5vw;
   }
   section.services {
-    height: 571px;
+    height: 110vw;
+    max-height: 675px;
   }
   section.services .services__block {
     padding: 40px 40px 64px 40px;
@@ -994,22 +989,26 @@ footer .media {
   section.services .services__block .services__items {
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    margin-top: 16px;
   }
   section.services .services__block .services__items .services__item {
-    margin-right: 54px;
+    margin: 26px 54px 26px 0;
   }
   section.services .services__block .services__items .services__item:nth-child(2n) {
     margin-right: 0;
   }
   section.services .services__block .services__items .services__item.image {
-    margin-right: 0;
+    margin: 0;
   }
   section.portfolio {
-    height: 150vw;
-    max-height: 1102px;
+    height: 145vw;
+    max-height: 1107px;
   }
   section.portfolio .portfolio__block {
     width: 100%;
+  }
+  section.portfolio .portfolio__block .description {
+    letter-spacing: 0.3px;
   }
   section.portfolio .portfolio__block .portfolio__images {
     -webkit-box-pack: justify;
@@ -1017,7 +1016,8 @@ footer .media {
             justify-content: space-between;
     width: 100%;
     min-width: 700px;
-    height: 814px;
+    height: 796px;
+    margin-top: 28px;
   }
   section.portfolio .portfolio__block .portfolio__images .portfolio__image {
     width: 216px;
@@ -1027,6 +1027,10 @@ footer .media {
     display: block;
     width: 100%;
     height: 100%;
+  }
+  section.about {
+    height: 130vw;
+    max-height: 690px;
   }
   section.about .about__block .about__persons {
     -webkit-box-pack: start;
@@ -1041,12 +1045,18 @@ footer .media {
     width: 28vw;
     height: 28vw;
   }
+  section.quote {
+    height: 631px;
+  }
+  section.quote .quote__block {
+    padding-bottom: 40px;
+  }
   section.quote .quote__block .quote__wrapper {
     margin-top: 30px;
   }
   section.quote .quote__block .quote__wrapper form input,
   section.quote .quote__block .quote__wrapper form textarea {
-    width: 55vw;
+    width: 57.5vw;
     height: 38px;
     margin-bottom: 12px;
   }
@@ -1054,6 +1064,9 @@ footer .media {
     height: 159px;
   }
   section.quote .quote__block .quote__wrapper form .error {
+    margin-left: 8px;
+  }
+  section.quote .quote__block .quote__wrapper form {
     margin-left: 12px;
     font-size: 14px;
   }
@@ -1083,6 +1096,7 @@ footer .media {
             transform: translateX(-100%);
   }
   .navbar__mobile {
+    outline: none;
     position: absolute;
     z-index: 15;
     -webkit-transform: translateX(0);
@@ -1092,7 +1106,7 @@ footer .media {
     padding-top: 16px;
     width: 278px;
     height: 100%;
-    background: #2D303A;
+    background: #2d303a;
     -webkit-box-shadow: 40px 0 40px rgba(0, 0, 0, 0.4);
             box-shadow: 40px 0 40px rgba(0, 0, 0, 0.4);
   }
@@ -1141,6 +1155,7 @@ footer .media {
     display: block;
     height: 20px;
     width: 25px;
+    outline: none;
   }
   header .header__block .header__burger.active {
     -webkit-transform: rotate(90deg);
@@ -1150,7 +1165,7 @@ footer .media {
     width: 25px;
     height: 2.4px;
     margin-top: 7px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-radius: 5px;
   }
   header .header__block .header__burger div:first-child {
@@ -1178,18 +1193,6 @@ footer .media {
   section.slider .slider__block button.right-button {
     right: 10px;
   }
-  section.slider .slider__block .slider__wrapper .slides .phone1 {
-    width: 68px;
-    height: 120px;
-    left: 56px;
-    top: 22px;
-  }
-  section.slider .slider__block .slider__wrapper .slides .phone2 {
-    height: 68px;
-    width: 120px;
-    right: 79px;
-    top: 54px;
-  }
   section.services {
     height: 200%;
     max-height: 1100px;
@@ -1215,23 +1218,29 @@ footer .media {
   }
   section.portfolio .portfolio__block {
     width: 100%;
-    padding: 52px 17px 42px 30px;
+    padding: 52px 20px 42px 30px;
   }
   section.portfolio .portfolio__block .portfolio__tags {
     margin-top: 12px;
   }
   section.portfolio .portfolio__block .portfolio__images {
-    width: 100%;
+    width: 99.2%;
     height: 100%;
-    min-width: 315px;
-    max-height: 553px;
+    min-width: 317px;
+    max-height: 550px;
     margin-top: 25px;
   }
   section.portfolio .portfolio__block .portfolio__images .portfolio__image {
     width: 151px;
-    height: 128px;
-    margin-right: 13px;
-    margin-bottom: 14px;
+    height: 127px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(7), section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(8) {
+    margin-bottom: 0;
+  }
+  section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(9), section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(10), section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(11), section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(12) {
+    display: none;
   }
   section.about {
     height: 280%;
@@ -1282,19 +1291,23 @@ footer .media {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  section.quote .quote__block .quote__wrapper form {
+    margin-left: 0;
+  }
   section.quote .quote__block .quote__wrapper form input,
   section.quote .quote__block .quote__wrapper form textarea {
     width: 100%;
-  }
-  section.quote .quote__block .quote__wrapper form input[type="submit"] {
-    width: 100%;
-    height: 50px;
   }
   section.quote .quote__block .quote__wrapper form div {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  section.quote .quote__block .quote__wrapper form div input[type='submit'] {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 0;
   }
   section.quote .quote__block .quote__wrapper form div .error {
     text-align: start;
@@ -1370,18 +1383,6 @@ footer .media {
   section.portfolio .portfolio__block .portfolio__images .portfolio__image {
     width: 123px;
     height: 104px;
-  }
-  section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(9) {
-    display: none;
-  }
-  section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(10) {
-    display: none;
-  }
-  section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(11) {
-    display: none;
-  }
-  section.portfolio .portfolio__block .portfolio__images .portfolio__image:nth-child(12) {
-    display: none;
   }
   section.about .about__block .about__persons {
     min-width: 260px;
